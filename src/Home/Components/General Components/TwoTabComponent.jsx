@@ -1,4 +1,5 @@
 import {
+  Box,
   Stack,
   Tab,
   TabContext,
@@ -26,10 +27,29 @@ const TwoTabComponent = ({ item }) => {
   return (
     <CustomPaper>
       <TabContext value={value}>
-        <TabList onChange={handleChange} aria-label="lab API tabs example">
-          <Tab label={item.label[0]} value={item.first_value} />
-          <Tab label={item.label[1]} value={item.second_value} />
-        </TabList>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
+          }}
+        >
+          <TabList onChange={handleChange} aria-label="lab API tabs example">
+            <Tab
+              label={item.label[0]}
+              value={item.first_value}
+              sx={{ paddingX: "20px" }}
+            />
+            <Tab
+              label={item.label[1]}
+              value={item.second_value}
+              sx={{ paddingX: "20px" }}
+            />
+          </TabList>
+        </Box>
+
         <TabPanel value={item.first_value}>
           <Stack direction="row" spacing={3} flexWrap="wrap">
             {React.createElement(item.component[0])}

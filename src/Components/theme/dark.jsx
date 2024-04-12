@@ -426,7 +426,7 @@ export const darkTheme = createTheme({
             transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
             height: "auto",
           },
-    
+
           "&.MuiSelect-option": {
             "&:hover": {
               borderRadius: "10px",
@@ -846,21 +846,21 @@ export const darkTheme = createTheme({
       },
     },
 
-    // MuiStack: {
-    //   defaultProps: {
-    //     useFlexGap: true,
-    //   },
-    //   styleOverrides: {
-    //     root: {
-    //       ">.MuiPaper-elevation1": {
-    //         borderRadius: "10px !important",
-    //         padding: "16px",
-    //         backgroundColor: "#212B3",
-    //         color: "#FFF",
-    //       },
-    //     },
-    //   },
-    // },
+    MuiStack: {
+      defaultProps: {
+        useFlexGap: true,
+      },
+      styleOverrides: {
+        root: {
+          "&.MuiPaper-elevation1": {
+            borderRadius: "10px !important",
+            padding: "16px",
+            backgroundColor: "#212B3",
+            color: "#FFF",
+          },
+        },
+      },
+    },
 
     MuiAutocomplete: {
       styleOverrides: {
