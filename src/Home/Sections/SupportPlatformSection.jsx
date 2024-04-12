@@ -3,6 +3,7 @@ import React from "react";
 import { useUIStore } from "../../store/store";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { THEME_KEY } from "../../config/enums";
+import Marquee from "react-fast-marquee";
 
 const PLATFORMS = [
   {
@@ -47,7 +48,7 @@ const SupportedPlatformSection = () => {
         flexDirection: "column",
         alignItems: "center",
         gap: "48px",
-
+     
         backgroundImage:
           theme === "dark"
             ? 'url("/images/platforms-section-bg-dark.jpg")'
@@ -55,17 +56,23 @@ const SupportedPlatformSection = () => {
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
         padding: {
-          mobile: "50px 16px",
-          tablet: "48px 16px",
+          mobile: "50px 0px",
+          tablet: "48px 0px",
         },
       }}
     >
       <Box
+    
         sx={{
+  
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
+          padding: {
+            mobile: "0px 16px",
+            tablet: "0px 16px",
+          },
         }}
       >
         <Typography variant="h4">Suggested Platforms</Typography>
@@ -76,12 +83,13 @@ const SupportedPlatformSection = () => {
       </Box>
       <Stack
         sx={{
-          display: "flex",
+        display: {mobile:"none", desktop:"flex"},
+       
           flexDirection: "row",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          gap: { mobile: "12px", laptop: "48px" },
-          maxWidth: "1300px",
+       
+         alignItems:"center",
+          gap: "48px",
+          
         }}
       >
         {PLATFORMS.map((item, key) => (
@@ -107,6 +115,43 @@ const SupportedPlatformSection = () => {
           </Card>
         ))}
       </Stack>
+      <Box sx={{ display: {mobile:"block", desktop:"none"}, width:"1000px" }}>
+      <Marquee direction="right" >
+      <Stack
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+         alignItems:"center",
+        
+          
+        }}
+      >
+        {PLATFORMS.map((item, key) => (
+          <Card sx={{ maxWidth: "max-content",  marginRight:"48px",}}>
+            <Stack
+              sx={{
+               
+                display: "flex",
+                gap: "16px",
+                alignItems: "center",
+                padding: "24px",
+              }}
+            >
+              <img
+                src={item.imageSource}
+                alt={item.alt}
+                style={{ width: "50px" }}
+              />
+              <Typography variant="h6" component="div">
+                {item.name}
+              </Typography>
+              <Typography variant="body2">{item.description}</Typography>
+            </Stack>
+          </Card>
+        ))}
+      </Stack>
+                    </Marquee>
+                    </Box>
     </Box>
   );
 };

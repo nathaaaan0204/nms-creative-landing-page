@@ -113,7 +113,7 @@ const HeroSection = () => {
                 sx={{
                   "&.MuiPaper-elevation4": {
                     padding: "0 8px",
-                    borderRadius: "10px",
+                    borderRadius: "8px",
                   },
                 }}
               >

@@ -17,7 +17,7 @@ import {
   Tabs,
   Typography,
 } from "nms-creative-ui";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Divider, useMediaQuery } from "@mui/material";
 import CodeBlock from "../../Components/lib/ReactSyntaxHighlighter";
 import { MuiSampleCode } from "../../Components/Generic Components/General Components/MuiSampleCode";
@@ -33,12 +33,13 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
   return (
     <Tab
       sx={{
+        
         minWidth: {
           desktop: "100%",
         },
         margin: {
-          mobile: "0 auto 0",
-          tablet: "0 24px 24px",
+       
+          mobile: "0 12px",
           desktop: "0 0 24px",
         },
       }}
@@ -46,13 +47,15 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
       label={
         <Box
           sx={{
-            padding: { mobile: "12px", tablet: "24px" },
+            padding: "24px",
             borderRadius: "12px",
             border: "1px solid #919EAB25",
             display: "flex",
-            alignItems: "center",
+            alignItems: {mobile:"start", desktop:"center"},
             justifyContent: "start",
-            gap: { mobile: "0", desktop: "24px" },
+            flexDirection: {mobile :"column", desktop:"row"},
+            gap: "24px",
+            minHeight: "100%",
             backgroundColor: isSelected ? "#FF4545" : "transparent",
             color: isSelected ? "#fff" : "#00000" && theme ==="dark" ? "#ffffff" : "#00000" 
           }}
@@ -69,7 +72,6 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
             <Typography
               variant="h4"
               sx={{
-                display: { mobile: "none", desktop: "block" },
                 textTransform: "capitalize",
               }}
             >
@@ -78,7 +80,7 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
             <Typography
               variant="body1"
               sx={{
-                display: { mobile: "none", desktop: "block" },
+             
                 textTransform: "capitalize",
               }}
             >
@@ -132,6 +134,18 @@ const FeaturesSection = () => {
   const handleNestedTabChange = (event, newValue) => {
     setNestedTabValue(newValue);
   };
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1200);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const isDesktop = useMediaQuery("(max-width:1200px)");
   return (
     <Box
@@ -192,18 +206,17 @@ const FeaturesSection = () => {
               <Tabs
                 orientation={isDesktop ? "horizontal" : "vertical"}
                 value={mainTabValue}
+                variant={isMobile ? "scrollable" : ""}
                 onChange={handleMainTabChange}
                 aria-label="Features tab"
                 sx={{
                   ".MuiTabs-indicator": {
                     backgroundColor: "transparent",
                   },
-
-                  ".css-heg063-MuiTabs-flexContainer": {
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  },
+                  ".css-145v6pe-MuiButtonBase-root-MuiTabScrollButton-root":{
+                    display: "none",
+                  }
+                
                 }}
               >
                 <CustomTab
@@ -277,37 +290,16 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: "900px", width: "100%" }}
+                  sx={{ height: {mobile: "100%", desktop: "900px"}, width: "100%" }}
                 >
-                  <Stack sx={{ textAlign: "center", display: "flex" }}>
-                    <Typography
-                      variant="h4"
-                      sx={{ display: { mobile: "block", desktop: "none" } }}
-                    >
-                      Customized Components
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        display: { mobile: "block", desktop: "none" },
-                        width: "100%",
-                        textAlign: "center",
-                        marginTop: "12px",
-                      }}
-                    >
-                      Code faster, code smarter with NMS Creative UI – the React
-                      UI library that not only prioritizes code consistency but
-                      also accelerates your development workflow for unmatched
-                      efficiency.
-                    </Typography>
-                  </Stack>
+                
                   <Paper
                     elevation={4}
-                    style={{
-                      paddingTop: "24px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
+                    sx={{
+                      ".css-hkfoxl-MuiPaper-root":{
+                        padding: "0px !important",
+                      
+                      }
                     }}
                   >
                     <Box
@@ -384,28 +376,12 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: "900px", width: "100%" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                  }}
                 >
-                  <Stack sx={{ textAlign: "center", display: "flex" }}>
-                    <Typography
-                      variant="h4"
-                      sx={{ display: { mobile: "block", desktop: "none" } }}
-                    >
-                      Responsiveness
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        display: { mobile: "block", desktop: "none" },
-                        width: "100%",
-                        textAlign: "center",
-                        margin: "24px 0px",
-                      }}
-                    >
-                      A design library that understands the importance of
-                      seamless responsiveness in today's multi-device landscape.
-                    </Typography>
-                  </Stack>
+                
                   <Stack
                     spacing={2}
                     sx={{
@@ -427,30 +403,12 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: "900px", width: "100%" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                  }}
                 >
-                  <Stack sx={{ textAlign: "center", display: "flex" }}>
-                    <Typography
-                      variant="h4"
-                      sx={{ display: { mobile: "block", desktop: "none" } }}
-                    >
-                      Templates
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        display: { mobile: "block", desktop: "none" },
-                        width: "100%",
-                        textAlign: "center",
-                        margin: "24px 0px",
-                      }}
-                    >
-                      Stylish, user-friendly designs for seamless, modern
-                      interfaces. Ideal for diverse projects, priotizing
-                      aesthetics and functionality for enhanced user
-                      experiences.
-                    </Typography>
-                  </Stack>
+                
                   <Box
                     sx={{
                       backgroundColor: theme === "light" ? "#FF454510" : "transparent",
@@ -477,29 +435,9 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: "900px", width: "100%" }}
+                  sx={{ height: {mobile:"100%" , desktop:"900px"}, width: "100%" }}
                 >
-                  <Stack sx={{ textAlign: "center", display: "flex" }}>
-                    <Typography
-                      variant="h4"
-                      sx={{ display: { mobile: "block", desktop: "none" } }}
-                    >
-                      NMS Creative UI Extras
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        display: { mobile: "block", desktop: "none" },
-                        width: "100%",
-                        textAlign: "center",
-                        margin: "24px 0px",
-                      }}
-                    >
-                      Graphs, charts, rich text, upload files, and form
-                      validation — the essential toolkit for dynamic and
-                      interactive data representation and user engagement.
-                    </Typography>
-                  </Stack>
+              
                   <Stack
                     spacing={2}
                     sx={{
