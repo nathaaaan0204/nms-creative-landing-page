@@ -211,7 +211,27 @@ export const lightTheme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-        
+          "&.MuiPaper-elevation1": {
+            borderRadius: "20px",
+            boxShadow:
+              "0px 1px 3px 0px rgba(210, 216, 243, 0.12), 0px 1px 1px 0px rgba(210, 216, 243, 0.14), 0px 2px 1px -1px rgba(210, 216, 243, 0.20)",
+            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+            height: "auto",
+          },
+          "&.MuiPaper-elevation2": {
+            borderRadius: "20px",
+            boxShadow:
+              "0px 1px 5px 0px rgba(210, 216, 243, 0.12), 0px 2px 2px 0px rgba(210, 216, 243, 0.14), 0px 3px 1px -2px rgba(210, 216, 243, 0.20)",
+            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+            height: "auto",
+          },
+          "&.MuiPaper-elevation3": {
+            borderRadius: "20px",
+            boxShadow:
+              "0px 1px 8px 0px rgba(210, 216, 243, 0.12), 0px 3px 4px 0px rgba(210, 216, 243, 0.14), 0px 3px 3px -2px rgba(210, 216, 243, 0.20)",
+            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+            height: "auto",
+          },
           "&.MuiPaper-elevation4": {
             borderRadius: "20px",
             boxShadow:
@@ -424,7 +444,7 @@ export const lightTheme = createTheme({
             transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
             height: "auto",
           },
-       
+        
           "&.MuiSelect-option": {
             "&:hover": {
               borderRadius: "10px",
@@ -839,21 +859,21 @@ export const lightTheme = createTheme({
       },
     },
 
-    MuiStack: {
-      defaultProps: {
-        useFlexGap: true,
-      },
-      styleOverrides: {
-        root: {
-          "&.MuiPaper-elevation1": {
-            borderRadius: "10px !important",
-            padding: "16px",
-            backgroundColor: "#FFF",
-            color: "#454F5B",
-          },
-        },
-      },
-    },
+    // MuiStack: {
+    //   defaultProps: {
+    //     useFlexGap: true,
+    //   },
+    //   styleOverrides: {
+    //     root: {
+    //       "&.MuiPaper-elevation1": {
+    //         borderRadius: "10px !important",
+    //         padding: "16px",
+    //         backgroundColor: "#FFF",
+    //         color: "#454F5B",
+    //       },
+    //     },
+    //   },
+    // },
 
     MuiAutocomplete: {
       styleOverrides: {

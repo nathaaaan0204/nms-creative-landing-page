@@ -376,7 +376,7 @@ const FeaturesSection = () => {
                         </CustomTabPanel>
                       </Box>
                     </Box>
-                  </Paper>
+                </Paper>
                 </Stack>
               </CustomTabPanel>
 
