@@ -65,7 +65,6 @@ const HeroSection = () => {
         justifyContent: "center",
         alignItems: "center",
         backgroundImage: theme === "dark" ? 'url("/images/bgHero.png")' : 'url("/images/Hero-bg.jpg")',
-        // backgroundImage: 'url("/images/Hero-bg.jpg")',
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
         padding: {
