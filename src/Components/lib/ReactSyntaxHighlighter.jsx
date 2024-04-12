@@ -43,11 +43,11 @@ const CodeBlock = ({ code, language }) => {
           borderRadius: "16px",
           backgroundColor: "#011627",
           overflow: "auto",
-          width:"100%",
+          width: "100%",
           maxHeight: "70vh",
-          display:"flex",
-          justifyContent:"space-between",
-          alignItems:"start"
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "start",
         }}
       >
         <Stack
@@ -55,7 +55,7 @@ const CodeBlock = ({ code, language }) => {
           justifyContent={"space-between"}
           alignItems={"start"}
         >
-          <PrismLight style={nightOwl} language={language} showLineNumbers wrapLongLines="pre-wrap">
+          <PrismLight style={nightOwl} language={language} showLineNumbers>
             {code}
           </PrismLight>
           <CopyToClipboard text={code} onCopy={handleCopyToClipboard}>

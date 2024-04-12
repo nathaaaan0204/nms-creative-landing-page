@@ -384,7 +384,7 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: "900px", width: "100%" }}
+                  sx={{ height: {mobile: "100%", desktop: "900px"}, width: "100%" }}
                 >
                   <Stack sx={{ textAlign: "center", display: "flex" }}>
                     <Typography
