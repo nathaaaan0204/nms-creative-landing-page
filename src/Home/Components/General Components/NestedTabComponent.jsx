@@ -34,22 +34,10 @@ const NestedTabComponent = ({ item }) => {
           onChange={handleChange}
           aria-label="lab API tabs example"
         >
-          <Tabs value={value} onChange={handleChange} variant="scrollable">
-            <Tab
-              label={item.label[0]}
-              value={item.first_value}
-              sx={{ paddingX: "20px" }}
-            />
-            <Tab
-              label={item.label[1]}
-              value={item.second_value}
-              sx={{ paddingX: "20px" }}
-            />
-            <Tab
-              label={item.label[2]}
-              value={item.third_value}
-              sx={{ paddingX: "20px" }}
-            />
+          <Tabs sx={{display: "flex", justifyContent: "center"}} value={value} onChange={handleChange} variant="scrollable">
+            <Tab label={item.label[0]} value={item.first_value} />
+            <Tab label={item.label[1]} value={item.second_value} />
+            <Tab label={item.label[2]} value={item.third_value} />
           </Tabs>
         </Box>
 

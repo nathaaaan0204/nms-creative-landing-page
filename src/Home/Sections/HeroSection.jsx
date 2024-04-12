@@ -2,7 +2,6 @@ import { Avatar, Box, Button, Card, CircularProgress, Grid, Icon, IconButton, Li
 import { Fragment, useState } from "react";
 import * as SolarIconSet from "solar-icon-set";
 import CopyToClipboard from "react-copy-to-clipboard";
-import { Link } from "react-router-dom";
 import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
 import ToggleButtonGroup from "../../Components/Input/ToggleButton/ToggleButtonGroup/ToggleButtonGroup";
 import ToggleButton from "../../Components/Input/ToggleButton/ToggleButton/ToggleButton";
@@ -65,6 +64,7 @@ const HeroSection = () => {
         justifyContent: "center",
         alignItems: "center",
         backgroundImage: theme === "dark" ? 'url("/images/bgHero.png")' : 'url("/images/Hero-bg.jpg")',
+        // backgroundImage: 'url("/images/Hero-bg.jpg")',
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
         padding: {
@@ -112,7 +112,7 @@ const HeroSection = () => {
                 sx={{
                   "&.MuiPaper-elevation4": {
                     padding: "0 8px",
-                    borderRadius: "10px",
+                    borderRadius: "8px"
                   },
                 }}
               >
@@ -193,7 +193,7 @@ const HeroSection = () => {
                     elevation={4}
                     sx={{ "&.MuiPaper-elevation4": { padding: "12px" } }}
                   >
-                    <Pagination count={5} color="secondary" />
+                    <Pagination count={10} siblingCount={0} color="secondary" />
                   </Paper>
                 </Grid>
               </Grid>

@@ -4,12 +4,8 @@ import React, { Fragment } from "react";
 const TextButtonSizes = () => {
   return (
     <Fragment>
-      <Button variant="text" size="small" color="secondary">
-        small
-      </Button>
-
-      <Button variant="text" size="medium" color="secondary">
-        medium
+      <Button variant="text" color="primary">
+        Button
       </Button>
     </Fragment>
   );

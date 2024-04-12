@@ -10,7 +10,7 @@ const ThemeProvider = ({ children }) => {
   const [{ theme }, actions] = useStore();
   const [defaultTheme] = useLocalStorage(
     THEME_KEY,
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+    window.matchMedia("(prefers-color-scheme: light)").matches ? "dark" : "light"
   );
   useEffect(() => {
     actions.setTheme(defaultTheme);
