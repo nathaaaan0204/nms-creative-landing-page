@@ -129,7 +129,7 @@ export const lightTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          fontSize: "14px",
+          // fontSize: "14px",
           borderRadius: "10px",
           textTransform: "uppercase",
           boxShadow: "none",

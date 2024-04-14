@@ -1,12 +1,25 @@
-import { Radio, Stack } from "nms-creative-ui";
+import { FormControl, FormControlLabel, Radio, RadioGroup } from "nms-creative-ui";
 
 const RadioSizes = () => {
   return (
-    <Stack direction="row" spacing={2}>
-      <Radio size="small" label="Small" value="small" />
-      <Radio size="medium" label="Medium" value="medium" />
-      <Radio size="large" label="Large" value="large" />
-    </Stack>
+    <FormControl>
+    <RadioGroup
+      aria-labelledby="demo-radio-buttons-group-label"
+      defaultValue="yes"
+      name="radio-buttons-group"
+    >
+      <FormControlLabel
+        value="yes"
+        control={<Radio size="large" />}
+        label="Yes"
+      />
+      <FormControlLabel
+        value="no"
+        control={<Radio size="large" />}
+        label="No"
+      />
+    </RadioGroup>
+  </FormControl>
   );
 };
 

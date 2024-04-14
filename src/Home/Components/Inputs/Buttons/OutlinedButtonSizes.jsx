@@ -6,9 +6,9 @@ import { Fragment } from "react";
 const OutlinedButtonSizes = () => {
   return (
     <Fragment>
-   
-      <Button variant="outlined" color="primary">
-        Button
+      {/* medium button */}
+      <Button size="medium" color="primary">
+        button
       </Button>
     </Fragment>
   );

@@ -27,7 +27,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Contained", "Outlined", "Text"],
+    label: ["Small", "Medium", "Large"],
     component: [ContainedButtonSizes, OutlinedButtonSizes, TextButtonSizes],
   },
   {
@@ -36,7 +36,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Standard", "Outlined", "Filled"],
+    label: ["Small", "Medium", "Large"],
     component: [StandardTextfield, OutlinedTextField, Filledtextfield],
   },
   {
@@ -45,7 +45,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Basic", "Icon", "Colored"],
+    label: ["Small", "Medium", "Large"],
     component: [BasicCheckbox, IconCheckbox, Colors],
   },
   {
@@ -54,7 +54,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Basic", "Sizes", "Placement"],
+    label: ["Small", "Medium", "Large"],
     component: [BasicSwitch, Sizes, LabelPlacement],
   },
   {
@@ -63,7 +63,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Basic", "Controlled", "Sizes"],
+    label: ["Small", "Medium", "Large"],
     component: [BasicRadio, Controlled, RadioSizes],
   },
   {

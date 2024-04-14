@@ -3,8 +3,9 @@ import React, { Fragment } from "react";
 
 const BasicCheckbox = () => {
   return (
+    // small checkbox
     <Fragment>
-      <Checkbox checked />
+      <Checkbox checked size="small"/>
     </Fragment>
   );
 };
