@@ -1,12 +1,9 @@
 import BasicAutocomplete from "../Home/Components/Inputs/Autocomplete/BasicAutocomplete";
 import FreeSolo from "../Home/Components/Inputs/Autocomplete/FreeSolo";
 import MultipleValue from "../Home/Components/Inputs/Autocomplete/MultipleValue";
-import ContainedButtonSizes from "../Home/Components/Inputs/Buttons/ContainedButtonSizes";
-import OutlinedButtonSizes from "../Home/Components/Inputs/Buttons/OutlinedButtonSizes";
-import TextButtonSizes from "../Home/Components/Inputs/Buttons/TextButtonSizes";
-import BasicCheckbox from "../Home/Components/Inputs/Checkbox/BasicCheckbox";
-import Colors from "../Home/Components/Inputs/Checkbox/Colors";
-import IconCheckbox from "../Home/Components/Inputs/Checkbox/IconCheckbox";
+import SmallButton from "../Home/Components/Inputs/Buttons/SmallButton";
+import MediumButton from "../Home/Components/Inputs/Buttons/MediumButton";
+import LargeButton from "../Home/Components/Inputs/Buttons/LargeButton";
 import BasicRadio from "../Home/Components/Inputs/RadioGroup/BasicRadio";
 import Controlled from "../Home/Components/Inputs/RadioGroup/Controlled";
 import RadioSizes from "../Home/Components/Inputs/RadioGroup/RadioSizes";
@@ -19,6 +16,9 @@ import Sizes from "../Home/Components/Inputs/Switch/Sizes";
 import Filledtextfield from "../Home/Components/Inputs/Text Field/FilledTextField";
 import OutlinedTextField from "../Home/Components/Inputs/Text Field/OutlinedTextField";
 import StandardTextfield from "../Home/Components/Inputs/Text Field/StandardTextField";
+import SmallCheckbox from "../Home/Components/Inputs/Checkbox/SmallCheckbox";
+import MediumCheckbox from "../Home/Components/Inputs/Checkbox/MediumCheckbox";
+import LargeCheckbox from "../Home/Components/Inputs/Checkbox/LargeCheckbox";
 
 const INPUTS = [
   {
@@ -27,8 +27,8 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Contained", "Outlined", "Text"],
-    component: [ContainedButtonSizes, OutlinedButtonSizes, TextButtonSizes],
+    label: ["Small", "Medium", "Large"],
+    component: [SmallButton, MediumButton, LargeButton],
   },
   {
     id: 2,
@@ -45,8 +45,8 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Basic", "Icon", "Colored"],
-    component: [BasicCheckbox, IconCheckbox, Colors],
+    label: ["Small", "Medium", "Large"],
+    component: [SmallCheckbox, MediumCheckbox, LargeCheckbox],
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Basic", "Sizes", "Placement"],
+    label: ["Small", "Medium", "Large"],
     component: [BasicSwitch, Sizes, LabelPlacement],
   },
   {
