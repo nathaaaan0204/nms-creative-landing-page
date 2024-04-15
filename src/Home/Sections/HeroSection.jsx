@@ -1,4 +1,22 @@
-import { Avatar, Box, Button, Card, CircularProgress, Grid, Icon, IconButton, ListItem, ListItemAvatar, ListItemText, Pagination, Paper, Stack, Tab, Tabs, Typography } from "nms-creative-ui";
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CircularProgress,
+  Grid,
+  Icon,
+  IconButton,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Pagination,
+  Paper,
+  Stack,
+  Tab,
+  Tabs,
+  Typography,
+} from "nms-creative-ui";
 import { Fragment, useState } from "react";
 import * as SolarIconSet from "solar-icon-set";
 import CopyToClipboard from "react-copy-to-clipboard";
@@ -11,7 +29,7 @@ import DiscreteSliderLabel from "../../Components/Generic Components/CustSlider"
 import { useUIStore } from "../../store/store";
 import { THEME_KEY } from "../../config/enums";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
-
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [value, setValue] = useState(0);
@@ -63,7 +81,10 @@ const HeroSection = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: theme === "dark" ? 'url("/images/bgHero.png")' : 'url("/images/Hero-bg.jpg")',
+        backgroundImage:
+          theme === "dark"
+            ? 'url("/images/bgHero.png")'
+            : 'url("/images/Hero-bg.jpg")',
         // backgroundImage: 'url("/images/Hero-bg.jpg")',
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
@@ -139,14 +160,13 @@ const HeroSection = () => {
               </Paper>
             </Grid>
             <Grid item mobile={12} tablet={4} laptop={3} desktop={4}>
-             
-                <Button
-                  color="primary"
-                  sx={{ height: "max-content", width: { mobile: "100%" } }}
-                >
-                  Get Started
-                </Button>
-          
+              <Button
+                component={Link}
+                color="primary"
+                sx={{ height: "max-content", width: { mobile: "100%" } }}
+              >
+                Get Started
+              </Button>
             </Grid>
           </Grid>
         </Grid>
@@ -157,7 +177,6 @@ const HeroSection = () => {
           sx={{
             display: { mobile: "none", laptop: "block" },
           }}
-      
         >
           <Paper
             elevation={4}
@@ -208,7 +227,6 @@ const HeroSection = () => {
                         maxWidth: "100%",
                         display: "flex",
                         justifyContent: "center",
-                        
                       },
                     }}
                   >
@@ -259,9 +277,9 @@ const HeroSection = () => {
                         padding: "24px",
                         display: "flex",
                         flexDirection: "column",
-                        justifyContent:"center",
+                        justifyContent: "center",
                         gap: "24px",
-                    height: {laptop:"218px", desktop:"195px"},
+                        height: { laptop: "218px", desktop: "195px" },
                       },
                     }}
                   >

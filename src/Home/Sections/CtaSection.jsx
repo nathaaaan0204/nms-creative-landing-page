@@ -53,7 +53,7 @@ const CtaSection = () => {
         <Button
           component={Link}
           color="primary"
-          sx={{ height: "max-content", width: { mobile: "100%" } }}
+          sx={{ height: "max-content", width: { mobile: "100%", tablet: "max-content" } }}
         >
           GET STARTED
         </Button>
