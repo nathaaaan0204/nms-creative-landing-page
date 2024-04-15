@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Button, Card, Grid, Stack, Typography } from "nms-creative-ui";
 import { Divider } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -78,7 +77,7 @@ const DesignFilesSection = () => {
           sx={{
             padding: "16px",
             fontWeight: "700",
-            width: { mobile: "100%" },
+            width: { mobile: "100%", tablet: "max-content" },
           }}
           startIcon={
             <img
