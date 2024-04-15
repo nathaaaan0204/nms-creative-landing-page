@@ -50,11 +50,13 @@ const CtaSection = () => {
         >
           Transforming web design with precision-crafted elements.
         </Typography>
-        <Link to={"/getting-started/introduction"} underline="none">
-          <Button color="primary" sx={{ width: "fit-content" }}>
-            GET STARTED
-          </Button>
-        </Link>
+        <Button
+          component={Link}
+          color="primary"
+          sx={{ height: "max-content", width: { mobile: "100%" } }}
+        >
+          GET STARTED
+        </Button>
         <Box sx={{ position: "absolute", top: "18%", right: "25%" }}>
           <ScaleAnimation />
         </Box>
