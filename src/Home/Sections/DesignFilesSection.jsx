@@ -98,7 +98,7 @@ const DesignFilesSection = () => {
               elevation={6}
               sx={{
                 
-                backgroundImage: `url("/images/features-bg.png")`,
+                backgroundImage: `url("/images/CardBg.png")`,
             
                 width: "100%",
                 "&.MuiPaper-elevation6": {

@@ -29,7 +29,6 @@ const Navbar = () => {
       color="inherit"
       sx={{
         "&.MuiPaper-elevation4": {
-          borderRadius: "0",
           boxShadow: "none",
           borderRadius: "0px",
         },

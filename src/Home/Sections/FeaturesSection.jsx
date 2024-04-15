@@ -33,9 +33,10 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
   return (
     <Tab
       sx={{
-        width: {
-          mobile:"300px",
-          laptop: "100%",
+        width:"300px",
+        minWidth: {
+          tablet: "300px",
+          desktop:"100%",
         },
         margin: {
           mobile: "0px 12px 12px 0px",

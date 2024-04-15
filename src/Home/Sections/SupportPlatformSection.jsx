@@ -57,7 +57,6 @@ const SupportedPlatformSection = () => {
           mobile: "50px 0px",
           tablet: "48px 0px",
         },
-        overflow: "hidden",
       }}
     >
       <Box
