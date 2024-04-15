@@ -129,43 +129,60 @@ export const darkTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          fontSize: "14px",
+          // fontSize: "14px",
           borderRadius: "10px",
           textTransform: "uppercase",
           boxShadow: "none",
           padding: "8px 12px",
           // minWidth: "109px",
-          padding: "8px 12px",
-          // minWidth: "109px",
 
           "&.MuiButton-containedPrimary": {
             color: "#FFFFFF",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
           "&.MuiButton-containedPrimary:hover": {
             backgroundColor: "#CC3737",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
           "&.MuiButton-containedSecondary:hover": {
             backgroundColor: "#4F6FA3",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
           "&.MuiButton-containedSecondary": {
             color: "#FFFFFF",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
           "&.MuiButton-containedSuccess": {
             color: "#FFFFFF",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
           "&.MuiButton-containedInfo": {
             color: "#FFFFFF",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
           "&.MuiButton-containedWarning": {
             color: "#FFFFFF",
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
           "&.MuiButton-containedError": {
             color: "#FFFFFF",
-          },
-
-          "@media only screen and (max-width: 600px)": {
-            width: "100%",
-            // backgroundColor: "red"
+            "@media only screen and (max-width: 600px)": {
+              width: "100%",
+            },
           },
         },
       },
