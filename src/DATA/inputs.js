@@ -1,24 +1,24 @@
 import BasicAutocomplete from "../Home/Components/Inputs/Autocomplete/BasicAutocomplete";
 import FreeSolo from "../Home/Components/Inputs/Autocomplete/FreeSolo";
 import MultipleValue from "../Home/Components/Inputs/Autocomplete/MultipleValue";
-import ContainedButtonSizes from "../Home/Components/Inputs/Buttons/ContainedButtonSizes";
-import OutlinedButtonSizes from "../Home/Components/Inputs/Buttons/OutlinedButtonSizes";
-import TextButtonSizes from "../Home/Components/Inputs/Buttons/TextButtonSizes";
-import BasicCheckbox from "../Home/Components/Inputs/Checkbox/BasicCheckbox";
-import Colors from "../Home/Components/Inputs/Checkbox/Colors";
-import IconCheckbox from "../Home/Components/Inputs/Checkbox/IconCheckbox";
+import SmallButton from "../Home/Components/Inputs/Buttons/SmallButton";
+import MediumButton from "../Home/Components/Inputs/Buttons/MediumButton";
+import LargeButton from "../Home/Components/Inputs/Buttons/LargeButton";
 import BasicRadio from "../Home/Components/Inputs/RadioGroup/BasicRadio";
 import Controlled from "../Home/Components/Inputs/RadioGroup/Controlled";
 import RadioSizes from "../Home/Components/Inputs/RadioGroup/RadioSizes";
 import BasicSelect from "../Home/Components/Inputs/Select/BasicSelect";
 import Filled from "../Home/Components/Inputs/Select/Filled";
 import Standard from "../Home/Components/Inputs/Select/Standard";
-import BasicSwitch from "../Home/Components/Inputs/Switch/BasicSwitch";
-import LabelPlacement from "../Home/Components/Inputs/Switch/LabelPlacement";
-import Sizes from "../Home/Components/Inputs/Switch/Sizes";
 import Filledtextfield from "../Home/Components/Inputs/Text Field/FilledTextField";
 import OutlinedTextField from "../Home/Components/Inputs/Text Field/OutlinedTextField";
 import StandardTextfield from "../Home/Components/Inputs/Text Field/StandardTextField";
+import SmallCheckbox from "../Home/Components/Inputs/Checkbox/SmallCheckbox";
+import MediumCheckbox from "../Home/Components/Inputs/Checkbox/MediumCheckbox";
+import LargeCheckbox from "../Home/Components/Inputs/Checkbox/LargeCheckbox";
+import SmallSwitch from "../Home/Components/Inputs/Switch/SmallSwitch";
+import DefaultSwitchSize from "../Home/Components/Inputs/Switch/DefaultSwitchSize";
+import ColorSwitch from "../Home/Components/Inputs/Switch/ColorSwitch";
 
 const INPUTS = [
   {
@@ -28,7 +28,7 @@ const INPUTS = [
     second_value: "2",
     third_value: "3",
     label: ["Small", "Medium", "Large"],
-    component: [ContainedButtonSizes, OutlinedButtonSizes, TextButtonSizes],
+    component: [SmallButton, MediumButton, LargeButton],
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ const INPUTS = [
     second_value: "2",
     third_value: "3",
     label: ["Small", "Medium", "Large"],
-    component: [BasicCheckbox, IconCheckbox, Colors],
+    component: [SmallCheckbox, MediumCheckbox, LargeCheckbox],
   },
   {
     id: 4,
@@ -54,8 +54,8 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Small", "Medium", "Large"],
-    component: [BasicSwitch, Sizes, LabelPlacement],
+    label: ["Small", "Default", "Color"],
+    component: [SmallSwitch, DefaultSwitchSize, ColorSwitch ],
   },
   {
     id: 5,

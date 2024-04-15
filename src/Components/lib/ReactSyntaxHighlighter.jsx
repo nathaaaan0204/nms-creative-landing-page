@@ -1,9 +1,10 @@
-import { Box, Grid, Icon, IconButton, Stack } from "nms-creative-ui";
-import { useSnackbar } from "notistack";
-import CopyToClipboard from "react-copy-to-clipboard";
-import { PrismLight } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import * as SolarIconSet from "solar-icon-set";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { PrismLight } from "react-syntax-highlighter";
+import { Box, Icon, Stack } from "nms-creative-ui";
+import { useSnackbar } from "notistack";
+import { IconButton } from "nms-creative-ui";
 
 const CodeBlock = ({ code, language }) => {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
@@ -28,44 +29,34 @@ const CodeBlock = ({ code, language }) => {
           <SolarIconSet.InfoSquare size={24} iconStyle="BoldDuotone" />
         </Icon>
       ),
-      style: {
-        backgroundColor: "#CBFEFA",
-        color: "#0090CB",
-      },
     });
   };
 
   return (
-    <Grid container>
-      <Box
-        style={{
-          padding: "24px",
-          borderRadius: "16px",
-          backgroundColor: "#011627",
-          overflow: "auto",
-          width: "100%",
-          maxHeight: "70vh",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "start",
-        }}
+    <Box
+      sx={{
+        padding: {mobile: "8px", tablet: "24px",},
+        borderRadius: "16px",
+        backgroundColor: "#011627",
+        overflow: "auto",
+        maxHeight: "70vh",
+      }}
+    >
+      <Stack
+        direction={"row"}
+        justifyContent={"space-between"}
+        alignItems={"start"}
       >
-        <Stack
-          direction={"row"}
-          justifyContent={"space-between"}
-          alignItems={"start"}
-        >
-          <PrismLight style={nightOwl} language={language} showLineNumbers>
-            {code}
-          </PrismLight>
-          <CopyToClipboard text={code} onCopy={handleCopyToClipboard}>
-            <IconButton color="neutral">
-              <SolarIconSet.Copy size={24} iconStyle="BoldDuotone" />
-            </IconButton>
-          </CopyToClipboard>
-        </Stack>
-      </Box>
-    </Grid>
+        <PrismLight style={nightOwl} language={language} showLineNumbers >
+          {code}
+        </PrismLight>
+        <CopyToClipboard text={code} onCopy={handleCopyToClipboard}>
+          <IconButton color="neutral">
+            <SolarIconSet.Copy size={24} iconStyle="BoldDuotone" />
+          </IconButton>
+        </CopyToClipboard>
+      </Stack>
+    </Box>
   );
 };
 

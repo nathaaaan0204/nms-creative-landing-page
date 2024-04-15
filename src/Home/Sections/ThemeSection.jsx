@@ -27,10 +27,16 @@ const ThemeSection = () => {
         alignItems: "center",
         gap: "48px",
         textAlign: "center",
+        backgroundSize:"cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition:"center center",
+        backgroundImage: theme === "dark" ? 'url("/images/themeSectionBg-Dark.png")' : 'url("/images/featuresbg-light.png")',
         padding: {
           mobile: "50px 16px",
           tablet: "48px 16px",
         },
+       
+     
       }}
     >
       <Box>
