@@ -46,6 +46,7 @@ const CtaSection = () => {
         </Typography>
         <Typography
           variant="body1"
+          color="text.main"
           sx={{ marginBottom: { mobile: "0px", laptop: "24px" } }}
         >
           Transforming web design with precision-crafted elements.

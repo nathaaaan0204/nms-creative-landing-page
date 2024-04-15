@@ -33,9 +33,9 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
   return (
     <Tab
       sx={{
-        
-        minWidth: {
-          desktop: "100%",
+        width: {
+          mobile:"300px",
+          laptop: "100%",
         },
         margin: {
           mobile: "0px 12px 12px 0px",
@@ -56,7 +56,7 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
             gap: "24px",
             minHeight: "100%",
             backgroundColor: isSelected ? "#FF4545" : "transparent",
-            color: isSelected ? "#fff" : "#00000" && theme ==="dark" ? "#ffffff" : "#00000" 
+            color: isSelected ? "#fff" : "#454F5B" && theme ==="dark" ? "#ffffff" : "#454F5B" 
           }}
         >
           <Box sx={{ color: isSelected ? "#ffffff" : "#FF4545" }}>{icon}</Box>
@@ -78,6 +78,7 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
             </Typography>
             <Typography
               variant="body1"
+              
               sx={{
              
                 textTransform: "capitalize",
@@ -177,7 +178,7 @@ const FeaturesSection = () => {
             textAlign: "center",
           }}
         >
-          <Typography variant="h4">Features</Typography>
+          <Typography variant="h4" color="text.main">Features</Typography>
           <Typography variant="h2" color="primary">
             Explore its features
           </Typography>
@@ -191,7 +192,7 @@ const FeaturesSection = () => {
               margin: "12px auto",
             }}
           />
-          <Typography variant="body1">
+          <Typography variant="body1" color="text.main">
             Unleash creativity by exploring a wealth of features that revolve
             around an extensive library of design elements and components.
           </Typography>

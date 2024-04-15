@@ -57,7 +57,7 @@ const NestedTabComponent = ({ item }) => {
           </Stack>
         </TabPanel>
       </TabContext>
-      <Typography variant="h6" sx={{ width: "100%" }}>
+      <Typography variant="h6" color="text.main" sx={{ width: "100%"}}>
         {item.name}
       </Typography>
     </CustomPaper>
