@@ -15,11 +15,11 @@ const Footer = () => {
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        height: "335px",
+      
         position: "relative",
         padding: {
-          mobile: "50px 16px",
-          tablet: "48px 16px",
+          mobile: "48px 16px",
+          laptop: "98px 16px",
         },
       }}
     >

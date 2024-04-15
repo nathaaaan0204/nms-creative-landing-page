@@ -46,6 +46,7 @@ const SupportedPlatformSection = () => {
         flexDirection: "column",
         alignItems: "center",
         gap: "48px",
+        overflow:"hidden",
         backgroundImage:
           theme === "dark"
             ? 'url("/images/platforms-section-bg-dark.jpg")'
@@ -83,6 +84,7 @@ const SupportedPlatformSection = () => {
           flexDirection: "row",
           alignItems: "center",
           gap: "48px",
+          
         }}
       >
         {PLATFORMS.map((item, key) => (
@@ -108,42 +110,40 @@ const SupportedPlatformSection = () => {
           </Card>
         ))}
       </Stack>
-      <Box
-        sx={{ display: { mobile: "block", desktop: "none" }, width: "1000px" }}
+      <Box sx={{ display: {mobile:"block", desktop:"none"}, width:"1000px" }}>
+      <Marquee direction="right" >
+      <Stack
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+         alignItems:"center",
+        }}
       >
-        <Marquee direction="right">
-          <Stack
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            {PLATFORMS.map((item, key) => (
-              <Card sx={{ maxWidth: "max-content", marginRight: "48px" }}>
-                <Stack
-                  sx={{
-                    display: "flex",
-                    gap: "16px",
-                    alignItems: "center",
-                    padding: "24px",
-                  }}
-                >
-                  <img
-                    src={item.imageSource}
-                    alt={item.alt}
-                    style={{ width: "50px" }}
-                  />
-                  <Typography variant="h6" component="div">
-                    {item.name}
-                  </Typography>
-                  <Typography variant="body2">{item.description}</Typography>
-                </Stack>
-              </Card>
-            ))}
-          </Stack>
-        </Marquee>
-      </Box>
+        {PLATFORMS.map((item, key) => (
+          <Card sx={{ maxWidth: "max-content",  marginRight:"48px",}}>
+            <Stack
+              sx={{
+                display: "flex",
+                gap: "16px",
+                alignItems: "center",
+                padding: "24px",
+              }}
+            >
+              <img
+                src={item.imageSource}
+                alt={item.alt}
+                style={{ width: "50px" }}
+              />
+              <Typography variant="h6" component="div">
+                {item.name}
+              </Typography>
+              <Typography variant="body2">{item.description}</Typography>
+            </Stack>
+          </Card>
+        ))}
+      </Stack>
+                    </Marquee>
+                    </Box>
     </Box>
   );
 };

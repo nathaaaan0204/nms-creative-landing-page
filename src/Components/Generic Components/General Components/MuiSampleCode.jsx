@@ -1,4 +1,4 @@
-export const MuiSampleCode = `import * as React from 'react';
+export const MuiSampleCode = `import React, { Fragment } from "react";
 import { Button, Stack } from "@mui/material";
 
 const Basic = () => {

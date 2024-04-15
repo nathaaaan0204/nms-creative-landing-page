@@ -37,8 +37,8 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
           desktop: "100%",
         },
         margin: {
-          mobile: "0 12px",
-          desktop: "0 0 24px",
+          mobile: "0px 12px 12px 0px",
+          desktop: "0px 0px 24px 0px",
         },
       }}
       {...props}
@@ -289,13 +289,11 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{
-                    height: { mobile: "100%", desktop: "900px" },
-                    width: "100%",
-                  }}
+   
+                  sx={{ height: {mobile: "100%", desktop: "900px"}, width: "100%", justifyContent:"center", display:"flex" }}
                 >
                   <Paper
-                    elevation={4}
+                    
                     sx={{
                       ".css-hkfoxl-MuiPaper-root": {
                         padding: "0px !important",
@@ -319,7 +317,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <Button style={{ width: "fit-content" }}>Default</Button>
-                      <Switch color="primary" checked />
+                      <Switch color="primary"  checked />
                       <Checkbox checked />
 
                       <RadioGroup
@@ -327,7 +325,11 @@ const FeaturesSection = () => {
                         defaultValue="female"
                         name="radio-buttons-group"
                       >
-                        <FormControlLabel value="female" control={<Radio />} />
+                        <FormControlLabel
+                          value="female"
+                          control={<Radio />}
+                        
+                        />
                       </RadioGroup>
                       <Badge badgeContent={1} color={"primary"}>
                         <Icon color="primary">
@@ -372,7 +374,10 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: "900px", width: "100%" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                  }}
                 >
                   <Stack
                     spacing={2}
@@ -395,7 +400,12 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: "900px", width: "100%" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                    display:"flex",
+                    justifyContent:"center",
+                  }}
                 >
                   <Box
                     sx={{

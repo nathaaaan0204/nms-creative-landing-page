@@ -87,13 +87,13 @@ const HeroSection = () => {
         <Grid
           item
           mobile
-          style={{ maxWidth: "700px" }}
+          style={{ maxWidth: "900px" }}
           sx={{
             display: "flex",
             flexDirection: "column",
             gap: "24px",
 
-            textAlign: { mobile: "center", laptop: "left" },
+            textAlign: { mobile: "center", desktop: "left" },
           }}
         >
           <Typography variant="h1">
@@ -112,7 +112,7 @@ const HeroSection = () => {
                 sx={{
                   "&.MuiPaper-elevation4": {
                     padding: "0 8px",
-                    borderRadius: "8px"
+                    borderRadius: "10px",
                   },
                 }}
               >
@@ -157,6 +157,7 @@ const HeroSection = () => {
           sx={{
             display: { mobile: "none", laptop: "block" },
           }}
+      
         >
           <Paper
             elevation={4}
@@ -197,14 +198,17 @@ const HeroSection = () => {
                   </Paper>
                 </Grid>
               </Grid>
-              <Grid container direction="column" spacing={1}>
-                <Grid item mobile>
+              <Grid container direction="column" spacing={2}>
+                <Grid item>
                   <Card
                     elevation={4}
                     sx={{
                       "&.MuiPaper-elevation4": {
                         padding: "16px 16px",
-                        maxWidth: "fit-content",
+                        maxWidth: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        
                       },
                     }}
                   >
@@ -246,16 +250,18 @@ const HeroSection = () => {
                     </Tabs>
                   </Card>
                 </Grid>
-                <Grid item mobile>
+                <Grid item>
                   <Card
                     elevation={4}
                     sx={{
                       backgroundColor: "#FF4545",
                       "&.MuiPaper-elevation4": {
-                        padding: "32px",
+                        padding: "24px",
                         display: "flex",
                         flexDirection: "column",
-                        gap: "12px",
+                        justifyContent:"center",
+                        gap: "24px",
+                    height: {laptop:"218px", desktop:"195px"},
                       },
                     }}
                   >
@@ -282,7 +288,7 @@ const HeroSection = () => {
                     </Button>
                   </Card>
                 </Grid>
-                <Grid item mobile>
+                <Grid item>
                   <Card
                     elevation={4}
                     sx={{
