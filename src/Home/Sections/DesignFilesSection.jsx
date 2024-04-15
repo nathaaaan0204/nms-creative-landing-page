@@ -75,7 +75,6 @@ const DesignFilesSection = () => {
         <Button
           component={Link}
           sx={{
-            padding: "16px",
             fontWeight: "700",
             width: { mobile: "100%", tablet: "max-content" },
           }}
