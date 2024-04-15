@@ -33,12 +33,10 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
   return (
     <Tab
       sx={{
-        
         minWidth: {
           desktop: "100%",
         },
         margin: {
-       
           mobile: "0 12px",
           desktop: "0 0 24px",
         },
@@ -51,13 +49,17 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
             borderRadius: "12px",
             border: "1px solid #919EAB25",
             display: "flex",
-            alignItems: {mobile:"start", desktop:"center"},
+            alignItems: { mobile: "start", desktop: "center" },
             justifyContent: "start",
-            flexDirection: {mobile :"column", desktop:"row"},
+            flexDirection: { mobile: "column", desktop: "row" },
             gap: "24px",
             minHeight: "100%",
             backgroundColor: isSelected ? "#FF4545" : "transparent",
-            color: isSelected ? "#fff" : "#00000" && theme ==="dark" ? "#ffffff" : "#00000" 
+            color: isSelected
+              ? "#fff"
+              : "#00000" && theme === "dark"
+              ? "#ffffff"
+              : "#00000",
           }}
         >
           <Box sx={{ color: isSelected ? "#ffffff" : "#FF4545" }}>{icon}</Box>
@@ -80,7 +82,6 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
             <Typography
               variant="body1"
               sx={{
-             
                 textTransform: "capitalize",
               }}
             >
@@ -153,7 +154,6 @@ const FeaturesSection = () => {
         height: { mobile: "100%" },
         display: "flex",
         justifyContent: "center",
-
         gap: "48px",
         padding: {
           mobile: "50px 16px",
@@ -213,10 +213,9 @@ const FeaturesSection = () => {
                   ".MuiTabs-indicator": {
                     backgroundColor: "transparent",
                   },
-                  ".css-145v6pe-MuiButtonBase-root-MuiTabScrollButton-root":{
+                  ".css-145v6pe-MuiButtonBase-root-MuiTabScrollButton-root": {
                     display: "none",
-                  }
-                
+                  },
                 }}
               >
                 <CustomTab
@@ -290,16 +289,17 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: {mobile: "100%", desktop: "900px"}, width: "100%" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                  }}
                 >
-                
                   <Paper
                     elevation={4}
                     sx={{
-                      ".css-hkfoxl-MuiPaper-root":{
+                      ".css-hkfoxl-MuiPaper-root": {
                         padding: "0px !important",
-                      
-                      }
+                      },
                     }}
                   >
                     <Box
@@ -319,7 +319,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <Button style={{ width: "fit-content" }}>Default</Button>
-                      <Switch color="primary" label="Primary" checked />
+                      <Switch color="primary" checked />
                       <Checkbox checked />
 
                       <RadioGroup
@@ -327,11 +327,7 @@ const FeaturesSection = () => {
                         defaultValue="female"
                         name="radio-buttons-group"
                       >
-                        <FormControlLabel
-                          value="female"
-                          control={<Radio />}
-                          label="Female"
-                        />
+                        <FormControlLabel value="female" control={<Radio />} />
                       </RadioGroup>
                       <Badge badgeContent={1} color={"primary"}>
                         <Icon color="primary">
@@ -378,7 +374,6 @@ const FeaturesSection = () => {
                   spacing={4}
                   sx={{ height: "900px", width: "100%" }}
                 >
-                
                   <Stack
                     spacing={2}
                     sx={{
@@ -402,10 +397,10 @@ const FeaturesSection = () => {
                   spacing={4}
                   sx={{ height: "900px", width: "100%" }}
                 >
-                
                   <Box
                     sx={{
-                      backgroundColor: theme === "light" ? "#FF454510" : "transparent",
+                      backgroundColor:
+                        theme === "light" ? "#FF454510" : "transparent",
                       overflow: "hidden",
                       height: "792px",
                       display: "flex",
@@ -429,9 +424,11 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-                  sx={{ height: {mobile:"100%" , desktop:"900px"}, width: "100%" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                  }}
                 >
-              
                   <Stack
                     spacing={2}
                     sx={{

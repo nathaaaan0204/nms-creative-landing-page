@@ -4,7 +4,7 @@ import React, { Fragment } from "react";
 const MediumCheckbox = () => {
   return (
     <Fragment>
-      <Checkbox checked />
+      <Checkbox checked size="medium"/>
     </Fragment>
   );
 };

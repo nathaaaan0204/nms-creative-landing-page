@@ -3,7 +3,7 @@ import React from 'react'
 
 const StandardTextfield = () => {
   return (
-    <FormControl fullWidth>
+    <FormControl >
     <TextField  label="Standard" variant="standard" />
     </FormControl>
   )

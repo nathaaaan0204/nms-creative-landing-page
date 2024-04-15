@@ -10,15 +10,15 @@ import RadioSizes from "../Home/Components/Inputs/RadioGroup/RadioSizes";
 import BasicSelect from "../Home/Components/Inputs/Select/BasicSelect";
 import Filled from "../Home/Components/Inputs/Select/Filled";
 import Standard from "../Home/Components/Inputs/Select/Standard";
-import BasicSwitch from "../Home/Components/Inputs/Switch/BasicSwitch";
-import LabelPlacement from "../Home/Components/Inputs/Switch/LabelPlacement";
-import Sizes from "../Home/Components/Inputs/Switch/Sizes";
 import Filledtextfield from "../Home/Components/Inputs/Text Field/FilledTextField";
 import OutlinedTextField from "../Home/Components/Inputs/Text Field/OutlinedTextField";
 import StandardTextfield from "../Home/Components/Inputs/Text Field/StandardTextField";
 import SmallCheckbox from "../Home/Components/Inputs/Checkbox/SmallCheckbox";
 import MediumCheckbox from "../Home/Components/Inputs/Checkbox/MediumCheckbox";
 import LargeCheckbox from "../Home/Components/Inputs/Checkbox/LargeCheckbox";
+import SmallSwitch from "../Home/Components/Inputs/Switch/SmallSwitch";
+import DefaultSwitchSize from "../Home/Components/Inputs/Switch/DefaultSwitchSize";
+import ColorSwitch from "../Home/Components/Inputs/Switch/ColorSwitch";
 
 const INPUTS = [
   {
@@ -36,7 +36,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Standard", "Outlined", "Filled"],
+    label: ["Small", "Medium", "Large"],
     component: [StandardTextfield, OutlinedTextField, Filledtextfield],
   },
   {
@@ -54,8 +54,8 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Small", "Medium", "Large"],
-    component: [BasicSwitch, Sizes, LabelPlacement],
+    label: ["Small", "Default", "Color"],
+    component: [SmallSwitch, DefaultSwitchSize, ColorSwitch ],
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ const INPUTS = [
     first_value: "1",
     second_value: "2",
     third_value: "3",
-    label: ["Basic", "Controlled", "Sizes"],
+    label: ["Small", "Medium", "Large"],
     component: [BasicRadio, Controlled, RadioSizes],
   },
   {

@@ -1,21 +1,33 @@
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "nms-creative-ui";
+import {
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Radio,
+  RadioGroup,
+} from "nms-creative-ui";
 import * as React from "react";
 
-const BasicRadio  = () => {
+const BasicRadio = () => {
   return (
     <FormControl>
-      <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="female"
+        defaultValue="yes"
         name="radio-buttons-group"
       >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
+        <FormControlLabel
+          value="yes"
+          control={<Radio size="small" />}
+          label="Yes"
+        />
+        <FormControlLabel
+          value="no"
+          control={<Radio size="small" />}
+          label="No"
+        />
       </RadioGroup>
     </FormControl>
   );
-}
+};
 
 export default BasicRadio;
