@@ -5,19 +5,9 @@ import * as SolarIconSet from "solar-icon-set";
 
 const IconCheckbox = () => {
   return (
+    // medium checkbox
     <Fragment>
-      <Checkbox
-        icon={<SolarIconSet.Heart size={24} />}
-        checkedIcon={<SolarIconSet.Heart size={24} iconStyle="Bold" />}
-      />
-      <Checkbox
-        icon={<SolarIconSet.MedalRibbon size={24} />}
-        checkedIcon={<SolarIconSet.MedalRibbon size={24} iconStyle="Bold" />}
-      />
-      <Checkbox
-        icon={<SolarIconSet.Stars size={24} />}
-        checkedIcon={<SolarIconSet.Stars size={24} iconStyle="Bold" />}
-      />
+      <Checkbox checked size="medium"/>
     </Fragment>
   );
 };

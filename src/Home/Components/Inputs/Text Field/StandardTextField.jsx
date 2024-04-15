@@ -1,11 +1,11 @@
-import { TextField } from 'nms-creative-ui'
+import { FormControl, TextField } from 'nms-creative-ui'
 import React from 'react'
 
 const StandardTextfield = () => {
   return (
-    <>
-    <TextField fullWidth label="Standard" variant="standard" />
-    </>
+    <FormControl >
+    <TextField  label="Standard" variant="standard" />
+    </FormControl>
   )
 }
 

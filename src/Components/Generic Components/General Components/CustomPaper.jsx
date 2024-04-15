@@ -21,6 +21,7 @@ const CustomPaper = ({ children }) => {
         gap: "24px",
         padding: "24px",
         boxShadow: "none",
+        backgroundImage: theme === "dark" ? 'none' : 'url("/images/CardBg.png")',
       }}
     >
       {children}

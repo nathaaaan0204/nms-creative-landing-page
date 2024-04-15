@@ -4,7 +4,6 @@ import { useUIStore } from "../../store/store";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { THEME_KEY } from "../../config/enums";
 import Marquee from "react-fast-marquee";
-
 const PLATFORMS = [
   {
     name: "Edge",
@@ -37,7 +36,6 @@ const PLATFORMS = [
     description: "version 80 and above",
   },
 ];
-
 const SupportedPlatformSection = () => {
   const [{ theme }] = useUIStore();
   const [, setValueTheme] = useLocalStorage(THEME_KEY, theme);
@@ -48,7 +46,7 @@ const SupportedPlatformSection = () => {
         flexDirection: "column",
         alignItems: "center",
         gap: "48px",
-     
+        overflow:"hidden",
         backgroundImage:
           theme === "dark"
             ? 'url("/images/platforms-section-bg-dark.jpg")'
@@ -62,9 +60,7 @@ const SupportedPlatformSection = () => {
       }}
     >
       <Box
-    
         sx={{
-  
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -84,9 +80,7 @@ const SupportedPlatformSection = () => {
       <Stack
         sx={{
         display: {mobile:"none", desktop:"flex"},
-       
           flexDirection: "row",
-       
          alignItems:"center",
           gap: "48px",
           
@@ -115,22 +109,19 @@ const SupportedPlatformSection = () => {
           </Card>
         ))}
       </Stack>
-      <Box sx={{ display: {mobile:"block", desktop:"none"}, width:"1000px" }}>
+      <Box sx={{ display: {mobile:"block", desktop:"none"}, width:"1000px",}}>
       <Marquee direction="right" >
       <Stack
         sx={{
           display: "flex",
           flexDirection: "row",
          alignItems:"center",
-        
-          
         }}
       >
         {PLATFORMS.map((item, key) => (
           <Card sx={{ maxWidth: "max-content",  marginRight:"48px",}}>
             <Stack
               sx={{
-               
                 display: "flex",
                 gap: "16px",
                 alignItems: "center",
@@ -155,5 +146,4 @@ const SupportedPlatformSection = () => {
     </Box>
   );
 };
-
 export default SupportedPlatformSection;

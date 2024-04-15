@@ -3,13 +3,10 @@ import React, { Fragment } from "react";
 
 const TextButtonSizes = () => {
   return (
+    // large button
     <Fragment>
-      <Button variant="text" size="small" color="secondary">
-        small
-      </Button>
-
-      <Button variant="text" size="medium" color="secondary">
-        medium
+     <Button size="large" color="primary">
+        button
       </Button>
     </Fragment>
   );

@@ -5,11 +5,9 @@ import { lightTheme } from "../../../../Components/theme/light";
 
 const Colors = () => {
   return (
+    // large checkbox
     <Fragment>
-      <Checkbox style={{ color: lightTheme.palette.primary[100] }} />
-      <Checkbox color="info" checked />
-      <Checkbox color="warning" variant="warning" />
-      <Checkbox checked disabled />
+      <Checkbox checked size="large"/>
     </Fragment>
   );
 };

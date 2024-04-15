@@ -7,24 +7,27 @@ import {
 import React from "react";
 
 const Controlled = () => {
-  const [value, setValue] = React.useState("female");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+  
 
   return (
     <FormControl>
-      <RadioGroup
-        aria-labelledby="demo-controlled-radio-buttons-group"
-        name="controlled-radio-buttons-group"
-        value={value}
-        onChange={handleChange}
-      >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-      </RadioGroup>
-    </FormControl>
+    <RadioGroup
+      aria-labelledby="demo-radio-buttons-group-label"
+      defaultValue="yes"
+      name="radio-buttons-group"
+    >
+      <FormControlLabel
+        value="yes"
+        control={<Radio size="medium" />}
+        label="Yes"
+      />
+      <FormControlLabel
+        value="no"
+        control={<Radio size="medium" />}
+        label="No"
+      />
+    </RadioGroup>
+  </FormControl>
   );
 };
 

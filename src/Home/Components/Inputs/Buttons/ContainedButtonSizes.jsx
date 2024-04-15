@@ -5,14 +5,11 @@ import { Fragment } from "react";
 
 const ContainedButtonSizes = () => {
   return (
+    // small button
     <Fragment>
-      <Button size="small" color="secondary">
-        small
+      <Button size="small" color="primary">
+        button
       </Button>
-      <Button size="medium" color="secondary">
-        medium
-      </Button>
-      <Button color="secondary">large</Button>
     </Fragment>
   );
 };

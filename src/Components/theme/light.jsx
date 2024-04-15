@@ -90,7 +90,6 @@ export const lightTheme = createTheme({
       paper: "#FFFFFF",
     },
     white: {
-      
       main: "#FFF",
     },
   },
@@ -130,7 +129,7 @@ export const lightTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          fontSize: "14px",
+          // fontSize: "14px",
           borderRadius: "10px",
           textTransform: "uppercase",
           boxShadow: "none",
@@ -188,7 +187,6 @@ export const lightTheme = createTheme({
         },
       },
     },
-
 
     MuiListSubheader: {
       styleOverrides: {
@@ -935,8 +933,44 @@ export const lightTheme = createTheme({
           width: "100%",
 
           "& .MuiSlider-valueLabel": {
-            backgroundColor: 'unset',
-            color: "#00000099"
+            backgroundColor: "unset",
+            color: "#00000099",
+          },
+        },
+      },
+    },
+    
+    MuiDataGrid: {
+      styleOverrides: {
+        root: {
+          width: "100%",
+          "@media (max-width: 600px)": {
+            width: 250,
+          },
+          ".MuiDataGrid-main": {
+            border: "none",
+            ".MuiDataGrid-columnHeaders": {
+              borderColor: "#EEEEEE",
+            },
+            ".MuiDataGrid-columnHeader:focus, .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus":
+              {
+                outline: "none",
+              },
+            ".MuiDataGrid-columnHeaderTitle": {
+              fontWeight: "700",
+            },
+            ".MuiDataGrid-withBorderColor": {
+              borderColor: "#EEEEEE",
+            },
+            ".MuiDataGrid-row:hover": {
+              backgroundColor: "#F2F5FA",
+            },
+            ".MuiDataGrid-virtualScrollerContent:last-child, ": {
+              border: "none !important",
+            },
+          },
+          ".MuiDataGrid-footerContainer": {
+            border: "none",
           },
         },
       },
