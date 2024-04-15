@@ -40,11 +40,13 @@ const Footer = () => {
         </Typography>
         <Typography
           variant="body1"
+          color="text.main"
         >
          design.nmscreative.com
         </Typography>
         <Typography
           variant="body1"
+          color="text.main"
         >
          © All rights reserved
         </Typography>

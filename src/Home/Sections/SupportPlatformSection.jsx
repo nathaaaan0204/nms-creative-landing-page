@@ -72,8 +72,8 @@ const SupportedPlatformSection = () => {
           },
         }}
       >
-        <Typography variant="h4">Suggested Platforms</Typography>
-        <Typography variant="body1">
+        <Typography variant="h4" color="text.main">Suggested Platforms</Typography>
+        <Typography variant="body1" color="text.main">
           Unleash creativity by exploring a wealth of features that revolve
           around an extensive library of design elements and components.
         </Typography>
@@ -104,7 +104,7 @@ const SupportedPlatformSection = () => {
               <Typography variant="h6" component="div">
                 {item.name}
               </Typography>
-              <Typography variant="body2">{item.description}</Typography>
+              <Typography variant="body1">{item.description}</Typography>
             </Stack>
           </Card>
         ))}

@@ -33,7 +33,9 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
   return (
     <Tab
       sx={{
+        width: "300px",
         minWidth: {
+          tablet: "300px",
           desktop: "100%",
         },
         margin: {
@@ -57,9 +59,9 @@ const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
             backgroundColor: isSelected ? "#FF4545" : "transparent",
             color: isSelected
               ? "#fff"
-              : "#00000" && theme === "dark"
+              : "#454F5B" && theme === "dark"
               ? "#ffffff"
-              : "#00000",
+              : "#454F5B",
           }}
         >
           <Box sx={{ color: isSelected ? "#ffffff" : "#FF4545" }}>{icon}</Box>
@@ -178,7 +180,9 @@ const FeaturesSection = () => {
             textAlign: "center",
           }}
         >
-          <Typography variant="h4">Features</Typography>
+          <Typography variant="h4" color="text.main">
+            Features
+          </Typography>
           <Typography variant="h2" color="primary">
             Explore its features
           </Typography>
@@ -192,7 +196,7 @@ const FeaturesSection = () => {
               margin: "12px auto",
             }}
           />
-          <Typography variant="body1">
+          <Typography variant="body1" color="text.main">
             Unleash creativity by exploring a wealth of features that revolve
             around an extensive library of design elements and components.
           </Typography>
@@ -289,11 +293,14 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-   
-                  sx={{ height: {mobile: "100%", desktop: "900px"}, width: "100%", justifyContent:"center", display:"flex" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                    justifyContent: "center",
+                    display: "flex",
+                  }}
                 >
                   <Paper
-                    
                     sx={{
                       ".css-hkfoxl-MuiPaper-root": {
                         padding: "0px !important",
@@ -317,7 +324,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <Button style={{ width: "fit-content" }}>Default</Button>
-                      <Switch color="primary"  checked />
+                      <Switch color="primary" checked />
                       <Checkbox checked />
 
                       <RadioGroup
@@ -325,11 +332,7 @@ const FeaturesSection = () => {
                         defaultValue="female"
                         name="radio-buttons-group"
                       >
-                        <FormControlLabel
-                          value="female"
-                          control={<Radio />}
-                        
-                        />
+                        <FormControlLabel value="female" control={<Radio />} />
                       </RadioGroup>
                       <Badge badgeContent={1} color={"primary"}>
                         <Icon color="primary">
@@ -403,8 +406,8 @@ const FeaturesSection = () => {
                   sx={{
                     height: { mobile: "100%", desktop: "900px" },
                     width: "100%",
-                    display:"flex",
-                    justifyContent:"center",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
                 >
                   <Box

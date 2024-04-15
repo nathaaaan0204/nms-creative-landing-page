@@ -68,7 +68,7 @@ const UiComponentsSection = () => {
           }}
         >
           <Box sx={{ marginBottom: "48px", textAlign: "center" }}>
-            <Typography variant="h4">Ready-to-use</Typography>
+            <Typography variant="h4" color="text.main">Ready-to-use</Typography>
             <Typography variant="h2" color="primary">
               Creative UI Components
             </Typography>
@@ -82,7 +82,7 @@ const UiComponentsSection = () => {
                 margin: "12px auto",
               }}
             />
-            <Typography variant="body1">
+            <Typography variant="body1" color="text.main">
               Utilize our pre-designed elements such as buttons, inputs, cards,
               tables, and more to effortlessly craft visually attractive web
               pages for your project in significantly less time!

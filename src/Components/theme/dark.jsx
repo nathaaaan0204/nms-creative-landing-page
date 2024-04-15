@@ -503,26 +503,25 @@ export const darkTheme = createTheme({
         },
       },
     },
+
     MuiTextField: {
       defaultProps: {
-        size: "medium",
-        fullWidth: true,
-        variant: "outlined",
+        color: "secondary",
       },
       styleOverrides: {
         root: {
-          // width: "100%",
-          ".MuiOutlinedInput-root": {
-            borderRadius: "10px",
-            gap: "5px",
-
-            "& fieldset": {
-              borderColor: "#B1C5E6",
-            },
+          "@media only screen and (max-width: 768px)": {
+            width: "100%",
           },
-          ".MuiOutlinedInput-root.Mui-disabled": {
-            background: "#F4F6F9",
-            color: "var(--neutrals-light-body-text, #5B606F)",
+        },
+      },
+    },
+
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          "&.MuiOutlinedInput-root": {
+            borderRadius: "10px",
 
             "& fieldset": {
               borderColor: "#B1C5E6",
@@ -530,26 +529,53 @@ export const darkTheme = createTheme({
             "&:hover fieldset": {
               borderColor: "#4F6FA3",
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "#B1C5E6",
+          },
+          "&.MuiOutlinedInput-root.Mui-disabled": {
+            color: "#637381",
+
+            "& fieldset": {
+              borderColor: "#637381",
             },
           },
-          ".MuiOutlinedInput-root.Mui-error": {
-            "&:hover fieldset": {
-              borderColor: "#F73878",
+        },
+      },
+    },
+
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          "&.MuiFilledInput-root": {
+            borderRadius: "10px 10px 0px 0px",
+            background: "#324666",
+            "&.MuiFilledInput-underline": {
+              borderBottom: "1px solid #B1C5E6",
+              "&:hover::before": {
+                borderColor: "#4F6FA3",
+              },
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "#FC8797",
+          },
+          "&.MuiFilledInput-root.Mui-disabled": {
+            color: "#637381",
+            background: "#324666",
+          },
+        },
+      },
+    },
+
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          "&.MuiInput-root": {
+            // height: "40px",
+            "&.MuiInput-underline": {
+              borderBottom: "1px solid #B1C5E6",
+              "&:hover::before": {
+                borderColor: "#4F6FA3",
+              },
             },
           },
-          ".MuiFilledInput-root": {
-            borderRadius: "0px",
-          },
-          ".MuiInput-root": {
-            height: "40px",
-          },
-          "@media only screen and (max-width: 768px)": {
-            width: "100%",
+          "&.MuiInput-root.Mui-disabled": {
+            color: "#637381",
           },
         },
       },

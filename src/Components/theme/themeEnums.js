@@ -34,8 +34,8 @@ export const BREAKPOINTS = Object.freeze({
       lineHeight: "64px",
       fontSize: "48px",
       "@media only screen and (max-width: 900px)": {
-        lineHeight: "42px",
-        fontSize: "30px",
+        lineHeight: "36px",
+        fontSize: "24px",
       }
     },
     h3: {
@@ -48,8 +48,8 @@ export const BREAKPOINTS = Object.freeze({
       lineHeight: "36px",
       fontSize: "24px",
       "@media only screen and (max-width: 900px)": {
-        lineHeight: "24px",
-        fontSize: "18px",
+        lineHeight: "30px",
+        fontSize: "20px",
       }
     },
     h5: {
@@ -82,6 +82,10 @@ export const BREAKPOINTS = Object.freeze({
     body1: {
       lineHeight: "24px",
       fontSize: "16px",
+      "@media only screen and (max-width: 900px)": {
+        fontSize: "14px",
+        lineHeight: "22px",
+      }
     },
     body2: {
       lineHeight: "22px",

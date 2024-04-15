@@ -83,7 +83,7 @@ export const lightTheme = createTheme({
       main: "#486BAF",
     },
     text: {
-      main: "#4E4E4E",
+      main: "#454F5B",
     },
     background: {
       default: "#FBFBFC",
@@ -442,7 +442,7 @@ export const lightTheme = createTheme({
             transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
             height: "auto",
           },
-       
+
           "&.MuiSelect-option": {
             "&:hover": {
               borderRadius: "10px",
@@ -508,23 +508,22 @@ export const lightTheme = createTheme({
 
     MuiTextField: {
       defaultProps: {
-        size: "medium",
-        fullWidth: true,
-        variant: "outlined",
+        color: "secondary",
       },
       styleOverrides: {
         root: {
-          ".MuiOutlinedInput-root": {
-            borderRadius: "10px",
-            gap: "5px",
-
-            "& fieldset": {
-              borderColor: "#B1C5E6",
-            },
+          "@media only screen and (max-width: 768px)": {
+            width: "100%",
           },
-          ".MuiOutlinedInput-root.Mui-disabled": {
-            background: "#F4F6F9",
-            color: "var(--neutrals-light-body-text, #5B606F)",
+        },
+      },
+    },
+
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          "&.MuiOutlinedInput-root": {
+            borderRadius: "10px",
 
             "& fieldset": {
               borderColor: "#B1C5E6",
@@ -532,23 +531,53 @@ export const lightTheme = createTheme({
             "&:hover fieldset": {
               borderColor: "#4F6FA3",
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "#B1C5E6",
+          },
+          "&.MuiOutlinedInput-root.Mui-disabled": {
+            color: "#DFE3E8",
+
+            "& fieldset": {
+              borderColor: "#DFE3E8",
             },
           },
-          ".MuiOutlinedInput-root.Mui-error": {
-            "&:hover fieldset": {
-              borderColor: "#F73878",
-            },
-            "&.Mui-focused fieldset": {
-              borderColor: "#FC8797",
+        },
+      },
+    },
+
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          "&.MuiFilledInput-root": {
+            borderTop: "5px",
+            background: "#F2F5FA",
+            "&.MuiFilledInput-underline": {
+              borderBottom: "1px solid #B1C5E6",
+              "&:hover::before": {
+                borderColor: "#4F6FA3",
+              },
             },
           },
-          ".MuiFilledInput-root": {
-            borderRadius: "0px",
+          "&.MuiFilledInput-root.Mui-disabled": {
+            color: "#DFE3E8",
+            background: "#F4F6F9",
           },
-          ".MuiInput-root": {
-            height: "40px",
+        },
+      },
+    },
+
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          "&.MuiInput-root": {
+            // height: "40px",
+            "&.MuiInput-underline": {
+              borderBottom: "1px solid #B1C5E6",
+              "&:hover::before": {
+                borderColor: "#4F6FA3",
+              },
+            },
+          },
+          "&.MuiInput-root.Mui-disabled": {
+            color: "#DFE3E8",
           },
         },
       },
@@ -939,7 +968,7 @@ export const lightTheme = createTheme({
         },
       },
     },
-    
+
     MuiDataGrid: {
       styleOverrides: {
         root: {

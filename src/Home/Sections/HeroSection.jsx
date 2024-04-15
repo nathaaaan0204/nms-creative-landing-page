@@ -117,11 +117,11 @@ const HeroSection = () => {
             textAlign: { mobile: "center", desktop: "left" },
           }}
         >
-          <Typography variant="h1">
+          <Typography variant="h1" color="text.main">
             Move swiftly with
             <span style={{ color: "#FF4545" }}> NMS Creative UI</span>
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" color="text.main">
             Maximize your project's potential with NMS Creative UI – an
             innovative library empowering rapid customization for efficient web
             and app development.

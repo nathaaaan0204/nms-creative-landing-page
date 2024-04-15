@@ -40,7 +40,7 @@ const ThemeSection = () => {
       }}
     >
       <Box>
-        <Typography variant="h4">Theme</Typography>
+        <Typography variant="h4" color="text.main">Theme</Typography>
         <Typography variant="h2" color="primary">
           Flexible theme customization
         </Typography>
@@ -54,7 +54,7 @@ const ThemeSection = () => {
             margin: "12px auto",
           }}
         />
-        <Typography variant="body1">
+        <Typography variant="body1" color="text.main">
           Dive into the night with our UI Library's sleek Dark Mode, offering a
           stylish interface for a visually enhanced experience. Elevate your
           design aesthetics effortlessly.

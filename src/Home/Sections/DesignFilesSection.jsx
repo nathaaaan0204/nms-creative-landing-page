@@ -53,7 +53,7 @@ const DesignFilesSection = () => {
           gap: "24px",
         }}
       >
-        <Typography variant="h4">Easy View Files</Typography>
+        <Typography variant="h4" color="text.main">Easy View Files</Typography>
         <Typography variant="h2" color="primary">
           Figma Design Files
         </Typography>
@@ -67,7 +67,7 @@ const DesignFilesSection = () => {
             // margin: "12px auto",
           }}
         />
-        <Typography variant="body1">
+        <Typography variant="body1" color="text.main">
           Level up your Figma design workflow with NMS Creative UI – a treasure
           trove of design elements and components that seamlessly integrate to
           bring your creative vision to life.
@@ -97,7 +97,9 @@ const DesignFilesSection = () => {
             <Card
               elevation={6}
               sx={{
+                
                 backgroundImage: `url("/images/features-bg.png")`,
+            
                 width: "100%",
                 "&.MuiPaper-elevation6": {
                   padding: { mobile: "24px", desktop: "48px" },
@@ -120,8 +122,12 @@ const DesignFilesSection = () => {
                 <Typography variant="h6" color="secondary">
                   {item.title}
                 </Typography>
-                <Typography variant="h4">{item.subtitle}</Typography>
-                <Typography variant="body1">{item.description}</Typography>
+                <Typography variant="h4" color="text.main">
+                  {item.subtitle}
+                </Typography>
+                <Typography variant="body1" color="text.main">
+                  {item.description}
+                </Typography>
               </Stack>
               <img src={item.imageSource} alt={item.alt} />
             </Card>
