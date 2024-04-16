@@ -31,15 +31,9 @@ const CtaSection = () => {
       }}
     >
       <Stack
-        sx={{
-          isplay: "flex",
-          flexDirection: "column",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100%",
-          gap: "24px",
-        }}
+       justifyContent="center"
+       alignItems="center"
+       spacing={3}
       >
         <Typography variant="h2" color="primary">
           Design Beyond Boundaries
@@ -54,7 +48,7 @@ const CtaSection = () => {
         <Button
           component={Link}
           color="primary"
-          sx={{ height: "max-content", width: { mobile: "100%", tablet: "max-content" } }}
+          sx={{ width: { mobile: "100%", tablet: "max-content" } }}
         >
           GET STARTED
         </Button>

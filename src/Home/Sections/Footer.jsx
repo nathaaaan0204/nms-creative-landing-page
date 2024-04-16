@@ -4,19 +4,19 @@ import { useUIStore } from "../../store/store";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { THEME_KEY } from "../../config/enums";
 
-
 const Footer = () => {
   const [{ theme }] = useUIStore();
   const [, setValueTheme] = useLocalStorage(THEME_KEY, theme);
   return (
     <Box
       sx={{
-        backgroundImage: theme === "dark" ? `url("/images/footer-bg-darkMode.png")` : `url("/images/platforms-section-bg.jpg")`,
+        backgroundImage:
+          theme === "dark"
+            ? `url("/images/footer-bg-darkMode.png")`
+            : `url("/images/platforms-section-bg.jpg")`,
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-      
-        position: "relative",
         padding: {
           mobile: "48px 16px",
           laptop: "98px 16px",
@@ -24,31 +24,20 @@ const Footer = () => {
       }}
     >
       <Stack
-        sx={{
-          isplay: "flex",
-          flexDirection: "column",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100%",
-          gap: "8px",
-        }}
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        spacing={1}
       >
-       <img src="/logo/nmsLogo.svg" alt="NMS LOGO" />
+        <img loading="lazy" src="/logo/nmsLogo.svg" alt="NMS LOGO" />
         <Typography variant="h4" color="primary">
           NMS Creative UI
         </Typography>
-        <Typography
-          variant="body1"
-          color="text.main"
-        >
-         design.nmscreative.com
+        <Typography variant="body1" color="text.main">
+          design.nmscreative.com
         </Typography>
-        <Typography
-          variant="body1"
-          color="text.main"
-        >
-         © All rights reserved
+        <Typography variant="body1" color="text.main">
+          © All rights reserved
         </Typography>
       </Stack>
     </Box>

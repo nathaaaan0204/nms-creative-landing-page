@@ -291,6 +291,7 @@ const HeroSection = () => {
                       style={{ backgroundColor: "#fff" }}
                       startIcon={
                         <img
+                          loading="lazy"
                           src="/logo/nmsLogo.svg"
                           alt="NMS LOGO"
                           style={{

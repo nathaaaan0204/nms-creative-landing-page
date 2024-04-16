@@ -17,7 +17,7 @@ import {
   Tabs,
   Typography,
 } from "nms-creative-ui";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Divider, useMediaQuery } from "@mui/material";
 import CodeBlock from "../../Components/lib/ReactSyntaxHighlighter";
 import { MuiSampleCode } from "../../Components/Generic Components/General Components/MuiSampleCode";
@@ -26,78 +26,13 @@ import Marquee from "react-fast-marquee";
 import { useUIStore } from "../../store/store";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { THEME_KEY } from "../../config/enums";
-
-const CustomTab = ({ title, description, icon, isSelected, ...props }) => {
-  const [{ theme }] = useUIStore();
-  const [, setValueTheme] = useLocalStorage(THEME_KEY, theme);
-  return (
-    <Tab
-      sx={{
-        width:"300px",
-        minWidth: {
-          tablet: "300px",
-          desktop:"100%",
-        },
-        margin: {
-          mobile: "0px 12px 12px 0px",
-          desktop: "0px 0px 24px 0px",
-        },
-      }}
-      {...props}
-      label={
-        <Box
-          sx={{
-            padding: "24px",
-            borderRadius: "12px",
-            border: "1px solid #919EAB25",
-            display: "flex",
-            alignItems: { mobile: "start", desktop: "center" },
-            justifyContent: "start",
-            flexDirection: { mobile: "column", desktop: "row" },
-            gap: "24px",
-            minHeight: "100%",
-            backgroundColor: isSelected ? "#FF4545" : "transparent",
-            color: isSelected ? "#fff" : "#454F5B" && theme ==="dark" ? "#ffffff" : "#454F5B" 
-          }}
-        >
-          <Box sx={{ color: isSelected ? "#ffffff" : "#FF4545" }}>{icon}</Box>
-          <Box
-            sx={{
-              textAlign: "left",
-              display: "flex",
-              flexDirection: "column",
-              gap: "12px",
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                textTransform: "capitalize",
-              }}
-            >
-              {title}
-            </Typography>
-            <Typography
-              variant="body1"
-              
-              sx={{
-                textTransform: "capitalize",
-              }}
-            >
-              {description}
-            </Typography>
-          </Box>
-        </Box>
-      }
-    />
-  );
-};
+import CustomTab from "../../Components/Generic Components/General Components/CustomTab";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <Fragment
+    <div
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -105,7 +40,7 @@ function CustomTabPanel(props) {
       {...other}
     >
       {value === index && <Box sx={{}}>{children}</Box>}
-    </Fragment>
+    </div>
   );
 }
 
@@ -177,7 +112,9 @@ const FeaturesSection = () => {
             textAlign: "center",
           }}
         >
-          <Typography variant="h4" color="text.main">Features</Typography>
+          <Typography variant="h4" color="text.main">
+            Features
+          </Typography>
           <Typography variant="h2" color="primary">
             Explore its features
           </Typography>
@@ -288,11 +225,14 @@ const FeaturesSection = () => {
                 <Stack
                   direction="column"
                   spacing={4}
-   
-                  sx={{ height: {mobile: "100%", desktop: "900px"}, width: "100%", justifyContent:"center", display:"flex" }}
+                  sx={{
+                    height: { mobile: "100%", desktop: "900px" },
+                    width: "100%",
+                    justifyContent: "center",
+                    display: "flex",
+                  }}
                 >
                   <Paper
-                    
                     sx={{
                       ".css-hkfoxl-MuiPaper-root": {
                         padding: "0px !important",
@@ -316,7 +256,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <Button style={{ width: "fit-content" }}>Default</Button>
-                      <Switch color="primary"  checked />
+                      <Switch color="primary" checked />
                       <Checkbox checked />
 
                       <RadioGroup
@@ -324,11 +264,7 @@ const FeaturesSection = () => {
                         defaultValue="female"
                         name="radio-buttons-group"
                       >
-                        <FormControlLabel
-                          value="female"
-                          control={<Radio />}
-                        
-                        />
+                        <FormControlLabel value="female" control={<Radio />} />
                       </RadioGroup>
                       <Badge badgeContent={1} color={"primary"}>
                         <Icon color="primary">
@@ -388,6 +324,7 @@ const FeaturesSection = () => {
                     }}
                   >
                     <img
+                      loading="lazy"
                       src="/images/responsiveness-img.png"
                       alt=""
                       style={{ maxWidth: "534px", width: "100%" }}
@@ -402,8 +339,8 @@ const FeaturesSection = () => {
                   sx={{
                     height: { mobile: "100%", desktop: "900px" },
                     width: "100%",
-                    display:"flex",
-                    justifyContent:"center",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
                 >
                   <Box
@@ -420,10 +357,18 @@ const FeaturesSection = () => {
                     }}
                   >
                     <Marquee direction="right">
-                      <img src="/images/MarqueeImage.png" alt="" />
+                      <img
+                        loading="lazy"
+                        src="/images/MarqueeImage.png"
+                        alt=""
+                      />
                     </Marquee>
                     <Marquee direction="left">
-                      <img src="/images/MarqueeImage.png" alt="" />
+                      <img
+                        loading="lazy"
+                        src="/images/MarqueeImage.png"
+                        alt=""
+                      />
                     </Marquee>
                   </Box>
                 </Stack>
@@ -454,6 +399,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <img
+                        loading="lazy"
                         src="/images/Area chart.png"
                         alt=""
                         style={{ width: "100%" }}
@@ -466,6 +412,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <img
+                        loading="lazy"
                         src="/images/Line chart.png"
                         alt=""
                         style={{ width: "100%" }}
@@ -478,6 +425,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <img
+                        loading="lazy"
                         src="/images/Column chart.png"
                         alt=""
                         style={{ width: "100%" }}

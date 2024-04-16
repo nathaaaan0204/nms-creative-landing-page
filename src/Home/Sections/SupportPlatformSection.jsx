@@ -4,48 +4,16 @@ import { useUIStore } from "../../store/store";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { THEME_KEY } from "../../config/enums";
 import Marquee from "react-fast-marquee";
-const PLATFORMS = [
-  {
-    name: "Edge",
-    imageSource: "/images/platforms/edge.svg",
-    alt: "Edge",
-    description: "version 91 and above",
-  },
-  {
-    name: "Firefox",
-    imageSource: "/images/platforms/firefox.svg",
-    alt: "Firefox",
-    description: "version 78 and above",
-  },
-  {
-    name: "Chrome",
-    imageSource: "/images/platforms/chrome.svg",
-    alt: "Chrome",
-    description: "version 90 and above",
-  },
-  {
-    name: "Safari",
-    imageSource: "/images/platforms/safari.svg",
-    alt: "Safari",
-    description: "version 14 and above",
-  },
-  {
-    name: "Opera",
-    imageSource: "/images/platforms/opera.svg",
-    alt: "Opera",
-    description: "version 80 and above",
-  },
-];
+import PLATFORMS from "../../DATA/platforms";
+
 const SupportedPlatformSection = () => {
   const [{ theme }] = useUIStore();
   const [, setValueTheme] = useLocalStorage(THEME_KEY, theme);
   return (
-    <Box
+    <Stack
+      alignItems="center"
+      spacing={5}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "48px",
         overflow: "hidden",
         backgroundImage:
           theme === "dark"
@@ -59,34 +27,32 @@ const SupportedPlatformSection = () => {
         },
       }}
     >
-      <Box
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        spacing={1}
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
           textAlign: "center",
-          padding: {
-            mobile: "0px 16px",
-            tablet: "0px 16px",
-          },
+          padding: { mobile: "0px 16px", tablet: "0px" },
         }}
       >
-        <Typography variant="h4" color="text.main">Suggested Platforms</Typography>
+        <Typography variant="h4" color="text.main">
+          Suggested Platforms
+        </Typography>
         <Typography variant="body1" color="text.main">
           Unleash creativity by exploring a wealth of features that revolve
           around an extensive library of design elements and components.
         </Typography>
-      </Box>
+      </Stack>
       <Stack
+        direction="row"
+        spacing={4}
         sx={{
           display: { mobile: "none", desktop: "flex" },
-          flexDirection: "row",
-          alignItems: "center",
-          gap: "48px",
         }}
       >
-        {PLATFORMS.map((item, key) => (
-          <Card sx={{ maxWidth: "max-content" }}>
+        {PLATFORMS.map((item, index) => (
+          <Card key={index} sx={{ maxWidth: "max-content" }}>
             <Stack
               sx={{
                 display: "flex",
@@ -96,6 +62,7 @@ const SupportedPlatformSection = () => {
               }}
             >
               <img
+                loading="lazy"
                 src={item.imageSource}
                 alt={item.alt}
                 style={{ width: "50px" }}
@@ -112,15 +79,9 @@ const SupportedPlatformSection = () => {
         sx={{ display: { mobile: "block", desktop: "none" }, width: "1000px" }}
       >
         <Marquee direction="right">
-          <Stack
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            {PLATFORMS.map((item, key) => (
-              <Card sx={{ maxWidth: "max-content", marginRight: "48px" }}>
+          <Stack direction="row" spacing={4}>
+            {PLATFORMS.map((item, index) => (
+              <Card key={index} sx={{ maxWidth: "max-content", marginRight: "48px" }}>
                 <Stack
                   sx={{
                     display: "flex",
@@ -130,6 +91,7 @@ const SupportedPlatformSection = () => {
                   }}
                 >
                   <img
+                    loading="lazy"
                     src={item.imageSource}
                     alt={item.alt}
                     style={{ width: "50px" }}
@@ -144,7 +106,7 @@ const SupportedPlatformSection = () => {
           </Stack>
         </Marquee>
       </Box>
-    </Box>
+    </Stack>
   );
 };
 export default SupportedPlatformSection;
