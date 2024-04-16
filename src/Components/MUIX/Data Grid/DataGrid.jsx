@@ -13,7 +13,6 @@ const DataGrid = ({
   ...props
 }) => {
   return (
-    <Box sx={{ height: 400, width: "100%" }}>
       <NMSDataGrid
         columns={columns}
         density={density}
@@ -23,7 +22,6 @@ const DataGrid = ({
         slots={slots}
         {...props}
       />
-    </Box>
   );
 };
 

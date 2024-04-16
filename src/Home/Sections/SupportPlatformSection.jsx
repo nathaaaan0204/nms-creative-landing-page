@@ -57,7 +57,6 @@ const SupportedPlatformSection = () => {
           mobile: "50px 0px",
           tablet: "48px 0px",
         },
-        overflow: "hidden",
       }}
     >
       <Box
@@ -72,7 +71,9 @@ const SupportedPlatformSection = () => {
           },
         }}
       >
-        <Typography variant="h4" color="text.main">Suggested Platforms</Typography>
+        <Typography variant="h4" color="text.main">
+          Suggested Platforms
+        </Typography>
         <Typography variant="body1" color="text.main">
           Unleash creativity by exploring a wealth of features that revolve
           around an extensive library of design elements and components.
@@ -97,6 +98,7 @@ const SupportedPlatformSection = () => {
               }}
             >
               <img
+                loading="lazy"
                 src={item.imageSource}
                 alt={item.alt}
                 style={{ width: "50px" }}
@@ -131,6 +133,7 @@ const SupportedPlatformSection = () => {
                   }}
                 >
                   <img
+                    loading="lazy"
                     src={item.imageSource}
                     alt={item.alt}
                     style={{ width: "50px" }}

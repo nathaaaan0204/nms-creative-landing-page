@@ -392,6 +392,7 @@ const FeaturesSection = () => {
                     }}
                   >
                     <img
+                      loading="lazy"
                       src="/images/responsiveness-img.png"
                       alt=""
                       style={{ maxWidth: "534px", width: "100%" }}
@@ -424,10 +425,18 @@ const FeaturesSection = () => {
                     }}
                   >
                     <Marquee direction="right">
-                      <img src="/images/MarqueeImage.png" alt="" />
+                      <img
+                        loading="lazy"
+                        src="/images/MarqueeImage.png"
+                        alt=""
+                      />
                     </Marquee>
                     <Marquee direction="left">
-                      <img src="/images/MarqueeImage.png" alt="" />
+                      <img
+                        loading="lazy"
+                        src="/images/MarqueeImage.png"
+                        alt=""
+                      />
                     </Marquee>
                   </Box>
                 </Stack>
@@ -458,6 +467,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <img
+                        loading="lazy"
                         src="/images/Area chart.png"
                         alt=""
                         style={{ width: "100%" }}
@@ -470,6 +480,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <img
+                        loading="lazy"
                         src="/images/Line chart.png"
                         alt=""
                         style={{ width: "100%" }}
@@ -482,6 +493,7 @@ const FeaturesSection = () => {
                       }}
                     >
                       <img
+                        loading="lazy"
                         src="/images/Column chart.png"
                         alt=""
                         style={{ width: "100%" }}

@@ -53,7 +53,9 @@ const DesignFilesSection = () => {
           gap: "24px",
         }}
       >
-        <Typography variant="h4" color="text.main">Easy View Files</Typography>
+        <Typography variant="h4" color="text.main">
+          Easy View Files
+        </Typography>
         <Typography variant="h2" color="primary">
           Figma Design Files
         </Typography>
@@ -80,6 +82,7 @@ const DesignFilesSection = () => {
           }}
           startIcon={
             <img
+              loading="lazy"
               src="/svg images/figma logo.svg"
               alt="Figma logo"
               style={{
@@ -97,9 +100,8 @@ const DesignFilesSection = () => {
             <Card
               elevation={6}
               sx={{
-                
-                backgroundImage: `url("/images/features-bg.png")`,
-            
+                backgroundImage: `url("/images/CardBg.png")`,
+
                 width: "100%",
                 "&.MuiPaper-elevation6": {
                   padding: { mobile: "24px", desktop: "48px" },
@@ -129,7 +131,7 @@ const DesignFilesSection = () => {
                   {item.description}
                 </Typography>
               </Stack>
-              <img src={item.imageSource} alt={item.alt} />
+              <img loading="lazy" src={item.imageSource} alt={item.alt} />
             </Card>
           </Grid>
         ))}

@@ -12,15 +12,15 @@ import Footer from "./Sections/Footer";
 const HomePage = () => {
   return (
     <div>
-      <AppBar />
-      <HeroSection />
-      <FeaturesSection />
-      <UiComponentsSection />
-      <ThemeSection />
-      <SupportedPlatformSection />
-      <DesignFilesSection />
-      <CtaSection />
-      <Footer />
+        <AppBar />
+        <HeroSection />
+        <FeaturesSection />
+        <UiComponentsSection />
+        <ThemeSection />
+        <SupportedPlatformSection />
+        <DesignFilesSection />
+        <CtaSection />
+        <Footer />
     </div>
   );
 };

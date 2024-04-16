@@ -75,6 +75,7 @@ const HeroSection = () => {
   };
   return (
     <Box
+      loading="lazy"
       sx={{
         height: { mobile: "100%", desktop: "100vh" },
         paddingTop: "200px",
@@ -85,7 +86,6 @@ const HeroSection = () => {
           theme === "dark"
             ? 'url("/images/bgHero.png")'
             : 'url("/images/Hero-bg.jpg")',
-        // backgroundImage: 'url("/images/Hero-bg.jpg")',
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
         padding: {
@@ -182,7 +182,6 @@ const HeroSection = () => {
             elevation={4}
             sx={{
               flexDirection: "column",
-              // backgroundColor: "#FBFBFC",
               display: "flex",
               gap: "12px",
               "&.MuiPaper-elevation4": { padding: "24px 16px" },
@@ -191,7 +190,6 @@ const HeroSection = () => {
             <Box
               elevation={4}
               sx={{
-                // backgroundColor: "#FBFBFC",
                 display: "flex",
                 gap: "12px",
                 "&.MuiPaper-elevation4": { padding: "24px 16px" },
@@ -291,6 +289,7 @@ const HeroSection = () => {
                       style={{ backgroundColor: "#fff" }}
                       startIcon={
                         <img
+                          loading="lazy"
                           src="/logo/nmsLogo.svg"
                           alt="NMS LOGO"
                           style={{

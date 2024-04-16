@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { Icon } from "nms-creative-ui";
@@ -10,15 +10,14 @@ import { CssBaseline } from "@mui/material";
 import ThemeProvider from "./Components/theme/ThemeProvider";
 
 const Index = () => {
-
   return (
-    <ThemeProvider>
-      <CssBaseline />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </BrowserRouter>
+    <ThemeProvider>  
+        <CssBaseline />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </BrowserRouter>
     </ThemeProvider>
   );
 };

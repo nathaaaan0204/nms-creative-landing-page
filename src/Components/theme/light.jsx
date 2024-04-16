@@ -972,6 +972,13 @@ export const lightTheme = createTheme({
     MuiDataGrid: {
       styleOverrides: {
         root: {
+          padding: 48,
+          borderRadius: 20,
+          boxShadow: "0px 4px 8px 0px rgba(210, 216, 243, 0.24)",
+          border: "1px solid rgba(145, 158, 171, 0.25)",
+          background: "#FFFFFF",
+          color: "#454F5B",
+          gap: 24,
           width: "100%",
           "@media (max-width: 600px)": {
             width: 250,
@@ -989,7 +996,7 @@ export const lightTheme = createTheme({
               fontWeight: "700",
             },
             ".MuiDataGrid-withBorderColor": {
-              borderColor: "#EEEEEE",
+              borderColor: "rgba(145, 158, 171, 0.25)",
             },
             ".MuiDataGrid-row:hover": {
               backgroundColor: "#F2F5FA",

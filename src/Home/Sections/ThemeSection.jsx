@@ -27,20 +27,23 @@ const ThemeSection = () => {
         alignItems: "center",
         gap: "48px",
         textAlign: "center",
-        backgroundSize:"cover",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition:"center center",
-        backgroundImage: theme === "dark" ? 'url("/images/themeSectionBg-Dark.png")' : 'url("/images/featuresbg-light.png")',
+        backgroundPosition: "center center",
+        backgroundImage:
+          theme === "dark"
+            ? 'url("/images/themeSectionBg-Dark.png")'
+            : 'url("/images/featuresbg-light.png")',
         padding: {
           mobile: "50px 16px",
           tablet: "48px 16px",
         },
-       
-     
       }}
     >
       <Box>
-        <Typography variant="h4" color="text.main">Theme</Typography>
+        <Typography variant="h4" color="text.main">
+          Theme
+        </Typography>
         <Typography variant="h2" color="primary">
           Flexible theme customization
         </Typography>
@@ -70,6 +73,7 @@ const ThemeSection = () => {
         labelPlacement="left"
       />
       <img
+        loading="lazy"
         src={imageSource}
         alt="theme dashboard"
         style={{ width: "100%", maxWidth: "1100px", borderRadius: "12px" }}

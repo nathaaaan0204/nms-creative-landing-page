@@ -984,6 +984,14 @@ export const darkTheme = createTheme({
     MuiDataGrid: {
       styleOverrides: {
         root: {
+          padding: 48,
+          borderRadius: 20,
+          boxShadow:
+            "0px 0px 2px 0px rgba(0, 0, 0, 0.20), 0px 12px 24px -4px rgba(0, 0, 0, 0.12)",
+          border: "1px solid rgba(145, 158, 171, 0.20)",
+          background: "#212B36",
+          color: "#FFFFFF",
+          gap: 24,
           width: "100%",
           "@media (max-width: 600px)": {
             width: 250,
@@ -1001,11 +1009,11 @@ export const darkTheme = createTheme({
               fontWeight: "700",
             },
             ".MuiDataGrid-withBorderColor": {
-              borderColor: "#EEEEEE",
+              borderColor: "rgba(145, 158, 171, 0.20)",
             },
-            // ".MuiDataGrid-row:hover": {
-            //   backgroundColor: "#F2F5FA",
-            // },
+            ".MuiDataGrid-row:hover": {
+              backgroundColor: "#89AEE0",
+            },
             ".MuiDataGrid-virtualScrollerContent:last-child, ": {
               border: "none !important",
             },
