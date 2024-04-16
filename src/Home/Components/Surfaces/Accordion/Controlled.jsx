@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Stack, Typography } from "nms-creative-ui";
+import { Accordion, AccordionDetails, AccordionSummary, Stack, Typography } from "nms-creative-ui";
 import React, { Fragment, useState } from "react";
 import * as SolarIconSet from "solar-icon-set";
 

@@ -1,4 +1,4 @@
-import { DataGrid } from "nms-creative-ui";
+import { Box, DataGrid } from "nms-creative-ui";
 import React from "react";
 
 const columns = [
@@ -47,21 +47,20 @@ const rows = [
 
 const Basic = () => {
   return (
-    <DataGrid
-      rows={rows}
-      columns={columns}
-      initialState={{
-        pagination: {
-          paginationModel: {
-            pageSize: 6,
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 5,
+            },
           },
-        },
-      }}
-      pageSizeOptions={[9]}
-      density={"comfortable"}
-    />
+        }}
+        pageSizeOptions={[9]}
+        density={"comfortable"}
+      />
   );
 };
 
 export default Basic;
-
