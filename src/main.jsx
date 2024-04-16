@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { Icon } from "nms-creative-ui";
-import HomePage from "./Home/HomePage";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as SolarIconSet from "solar-icon-set";
 import { SnackbarProvider } from "notistack";
 import { CssBaseline } from "@mui/material";
 import ThemeProvider from "./Components/theme/ThemeProvider";
+import HomePage from "./Home/HomePage";
 
 const Index = () => {
   return (

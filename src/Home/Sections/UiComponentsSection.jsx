@@ -13,6 +13,7 @@ import MUIX from "../../DATA/muiX";
 import { useUIStore } from "../../store/store";
 import { THEME_KEY } from "../../config/enums";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import CustomDivider from "../../Components/Generic Components/General Components/CustomDivider";
 
 const UiComponentsSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -42,13 +43,11 @@ const UiComponentsSection = () => {
     setValue(newValue);
   };
   return (
-    <Fragment>
-      <Box
+      <Stack
+      justifyContent="center"
+      alignItems="center"
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
+       
           ".css-13xfq8m-MuiTabPanel-root": { maxWidth: "100%;", padding: "0" },
           ".css-10ut4ui-MuiButtonBase-root-MuiTab-root": { minWidth: "auto" },
           ".css-1q04gal-MuiDateCalendar-root, .css-ku1d3k-MuiTimeClock-root": {
@@ -67,27 +66,18 @@ const UiComponentsSection = () => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ marginBottom: "48px", textAlign: "center" }}>
+          <Stack alignItems="center" spacing={1}>
             <Typography variant="h4" color="text.main">Ready-to-use</Typography>
             <Typography variant="h2" color="primary">
               Creative UI Components
             </Typography>
-            <Divider
-              orientation="horizontal"
-              variant="middle"
-              style={{
-                width: "200px",
-                borderWidth: "1.5px",
-                borderColor: "#FF4545",
-                margin: "12px auto",
-              }}
-            />
-            <Typography variant="body1" color="text.main">
+            <CustomDivider/>
+          </Stack>
+          <Typography variant="body1" color="text.main" sx={{margin:"24px 0px"}}>
               Utilize our pre-designed elements such as buttons, inputs, cards,
               tables, and more to effortlessly craft visually attractive web
               pages for your project in significantly less time!
             </Typography>
-          </Box>
           <Stack spacing={4}>
             <Tabs
               value={value}
@@ -111,8 +101,8 @@ const UiComponentsSection = () => {
             <CustomTabPanel value={value} index={0}>
               <Grid sx={{ flexGrow: 1 }} container spacing={2}>
                 {INPUTS.map((item, index) => (
-                  <Grid item mobile={12} tablet={6} laptop={4}>
-                    <NestedTabComponent key={index} item={item} />
+                  <Grid item mobile={12} tablet={6} laptop={4} key={index} >
+                    <NestedTabComponent item={item} />
                   </Grid>
                 ))}
                 <Grid item mobile={12} tablet={6} laptop={4}>
@@ -123,8 +113,8 @@ const UiComponentsSection = () => {
             <CustomTabPanel value={value} index={1}>
               <Grid sx={{ flexGrow: 1 }} container spacing={2}>
                 {DATADISPLAY.map((item, index) => (
-                  <Grid item mobile={12} tablet={6} laptop={4}>
-                    <NestedTabComponent key={index} item={item} />
+                  <Grid item mobile={12} tablet={6} laptop={4} key={index} >
+                    <NestedTabComponent item={item} />
                   </Grid>
                 ))}
                 <Grid item mobile={12} tablet={6} laptop={4}>
@@ -135,8 +125,8 @@ const UiComponentsSection = () => {
             <CustomTabPanel value={value} index={2}>
               <Grid sx={{ flexGrow: 1 }} container spacing={2}>
                 {NAVIGATION.map((item, index) => (
-                  <Grid item mobile={12} tablet={6} laptop={4}>
-                    <NestedTabComponent key={index} item={item} />
+                  <Grid item mobile={12} tablet={6} laptop={4} key={index} >
+                    <NestedTabComponent item={item} />
                   </Grid>
                 ))}
                 <Grid item mobile={12} tablet={6} laptop={4}>
@@ -147,8 +137,8 @@ const UiComponentsSection = () => {
             <CustomTabPanel value={value} index={3}>
               <Grid sx={{ flexGrow: 1 }} container spacing={2}>
                 {FEEDBACK.map((item, index) => (
-                  <Grid item mobile={12} tablet={6} laptop={4}>
-                    <TwoTabComponent key={index} item={item} />
+                  <Grid item mobile={12} tablet={6} laptop={4} key={index} >
+                    <TwoTabComponent item={item} />
                   </Grid>
                 ))}
                 <Grid item mobile={12} tablet={6} laptop={4}>
@@ -159,8 +149,8 @@ const UiComponentsSection = () => {
             <CustomTabPanel value={value} index={4}>
               <Grid sx={{ flexGrow: 1 }} container spacing={2}>
                 {SURFACES.map((item, index) => (
-                  <Grid item mobile={12} tablet={6} laptop={4}>
-                    <TwoTabComponent key={index} item={item} />
+                  <Grid item mobile={12} tablet={6} laptop={4} key={index} >
+                    <TwoTabComponent item={item} />
                   </Grid>
                 ))}
                 <Grid item mobile={12} tablet={6} laptop={4}>
@@ -169,18 +159,17 @@ const UiComponentsSection = () => {
               </Grid>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={5}>
-              <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+              <Grid sx={{ flexGrow: 1 }} container spacing={2}  >
                 {MUIX.map((item, index) => (
-                  <Grid item mobile={12}>
-                    <TwoTabComponent key={index} item={item} />
+                  <Grid item mobile={12} key={index}>
+                    <TwoTabComponent item={item} />
                   </Grid>
                 ))}
               </Grid>
             </CustomTabPanel>
           </Stack>
         </Box>
-      </Box>
-    </Fragment>
+      </Stack>
   );
 };
 

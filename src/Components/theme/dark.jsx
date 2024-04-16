@@ -4,27 +4,11 @@ export const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      100: "#FFE6D9",
-      200: "#FFC7B4",
-      300: "#FFA28F",
-      400: "#FF7F73",
       main: "#FF4545",
-      600: "#DB3241",
-      700: "#B7223C",
-      800: "#931636",
-      900: "#7A0D33",
     },
 
     secondary: {
-      100: "#E2F0FC",
-      200: "#C6E0F9",
-      300: "#A5C7EF",
-      400: "#89AEE0",
       main: "#638BCC",
-      600: "#486BAF",
-      700: "#314F92",
-      800: "#1F3676",
-      900: "#132461",
     },
     tertiary: {
       main: "#FF6969",
@@ -33,48 +17,16 @@ export const darkTheme = createTheme({
       main: "#DFDFDF",
     },
     info: {
-      100: "#CBFEFA",
-      200: "#97FDFD",
-      300: "#63EEF9",
-      400: "#3DD9F4",
       main: "#00B9ED",
-      600: "#0090CB",
-      700: "#006CAA",
-      800: "#004D89",
-      900: "#003771",
     },
     warning: {
-      100: "#FFF6D8",
-      200: "#FFEBB2",
-      300: "#FFDD8B",
-      400: "#FFCF6F",
       main: "#FFB83F",
-      600: "#DB942E",
-      700: "#B7731F",
-      800: "#935614",
-      900: "#7A400C",
     },
     error: {
-      100: "#FEE8E2",
-      200: "#FECCC5",
-      300: "#FDAAA7",
-      400: "#FB9197",
       main: "#F96D82",
-      600: "#D64F70",
-      700: "#B33660",
-      800: "#902251",
-      900: "#771448",
     },
     success: {
-      100: "#EFFDD6",
-      200: "#DAFCAF",
-      300: "#BEF685",
-      400: "#A2ED65",
       main: "#78E236",
-      600: "#59C227",
-      700: "#3EA21B",
-      800: "#288311",
-      900: "#186C0A",
     },
     neutral: {
       main: "#DFE3E8",
@@ -129,13 +81,10 @@ export const darkTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          // fontSize: "14px",
           borderRadius: "10px",
           textTransform: "uppercase",
           boxShadow: "none",
           padding: "8px 12px",
-          // minWidth: "109px",
-
           "&.MuiButton-containedPrimary": {
             color: "#FFFFFF",
             "@media only screen and (max-width: 600px)": {
@@ -187,22 +136,10 @@ export const darkTheme = createTheme({
         },
       },
     },
-
     MuiListSubheader: {
       styleOverrides: {
         root: {
           backgroundColor: "#161C24 !important",
-        },
-      },
-    },
-
-    MuiDrawer: {
-      styleOverrides: {
-        root: {
-          "&>.MuiDrawer-paper": {
-            borderRight: "1px dashed rgb(145 158 171 / 23%)",
-            boxShadow: "none",
-          },
         },
       },
     },
@@ -239,211 +176,6 @@ export const darkTheme = createTheme({
             transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
             height: "auto",
           },
-          "&.MuiPaper-elevation5": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.20), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation6": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.20), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation7": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.20), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation8": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.20), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation9": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.20), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation10": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.20), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation11": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.20), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation12": {
-            borderRadius: "20px",
-            boxShadow: "0px 12px 24px -4px rgba(0, 0, 0, 0.16)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation13": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.20), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation14": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.20), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation15": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.20), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation16": {
-            borderRadius: "20px",
-            boxShadow: "0px 16px 32px -4px rgba(0, 0, 0, 0.16)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation17": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.20), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation18": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.20), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation19": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.20), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation20": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.20), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation21": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.20), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation22": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.20), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation23": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.20), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-          "&.MuiPaper-elevation24": {
-            borderRadius: "20px",
-            boxShadow:
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.20), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-
-          // primary elevation
-          "&.MuiPaper-elevation25": {
-            borderRadius: "20px",
-            padding: "24px",
-            backgroundColor: "#FF4545",
-            color: "#F9FAFB",
-            boxShadow: "0px 8px 16px 0px rgba(255, 69, 69, 0.24)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-
-          //secondary elevation
-          "&.MuiPaper-elevation26": {
-            borderRadius: "20px",
-            padding: "24px",
-            backgroundColor: "#638BCC",
-            color: "#F9FAFB",
-            boxShadow: "0px 8px 16px 0px rgba(99, 139, 204, 0.24)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-
-          //Info elevation
-          "&.MuiPaper-elevation27": {
-            borderRadius: "20px",
-            padding: "24px",
-            backgroundColor: "#00B9ED",
-            color: "#F9FAFB",
-            boxShadow: "0px 8px 16px 0px rgba(0, 185, 237, 0.24)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-
-          //Success elevation
-          "&.MuiPaper-elevation28": {
-            borderRadius: "20px",
-            padding: "24px",
-            backgroundColor: "#78E236",
-            color: "#F9FAFB",
-            boxShadow: "0px 8px 16px 0px rgba(120, 226, 54, 0.24)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-
-          //Warning elevation
-          "&.MuiPaper-elevation29": {
-            borderRadius: "20px",
-            padding: "24px",
-            backgroundColor: "#FFB83F",
-            color: "#F9FAFB",
-            boxShadow: "0px 8px 16px 0px rgba(255, 184, 63, 0.24)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-
-          //Error elevation
-          "&.MuiPaper-elevation30": {
-            borderRadius: "20px",
-            padding: "24px",
-            backgroundColor: "#D64F70",
-            color: "#F9FAFB",
-            boxShadow: "0px 8px 16px 0px rgba(249, 109, 130, 0.24)",
-            transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-            height: "auto",
-          },
-
           "&.MuiSelect-option": {
             "&:hover": {
               borderRadius: "10px",
@@ -454,7 +186,6 @@ export const darkTheme = createTheme({
         },
       },
     },
-
     MuiFormHelperText: {
       styleOverrides: {
         root: {
@@ -469,7 +200,6 @@ export const darkTheme = createTheme({
         },
       },
     },
-
     MuiDialog: {
       defaultProps: {
         maxWidth: "laptop",
@@ -485,7 +215,6 @@ export const darkTheme = createTheme({
             padding: "24px",
             boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
             "@media only screen and (max-width: 900px)": {
-              // borderRadius: 0,
               padding: "16px",
             },
           },
@@ -992,6 +721,14 @@ export const darkTheme = createTheme({
           background: "#212B36",
           color: "#FFFFFF",
           gap: 24,
+          padding: 48,
+          borderRadius: 20,
+          boxShadow:
+            "0px 0px 2px 0px rgba(0, 0, 0, 0.20), 0px 12px 24px -4px rgba(0, 0, 0, 0.12)",
+          border: "1px solid rgba(145, 158, 171, 0.20)",
+          background: "#212B36",
+          color: "#FFFFFF",
+          gap: 24,
           width: "100%",
           "@media (max-width: 600px)": {
             width: 250,
@@ -1010,6 +747,10 @@ export const darkTheme = createTheme({
             },
             ".MuiDataGrid-withBorderColor": {
               borderColor: "rgba(145, 158, 171, 0.20)",
+              borderColor: "rgba(145, 158, 171, 0.20)",
+            },
+            ".MuiDataGrid-row:hover": {
+              backgroundColor: "#89AEE0",
             },
             ".MuiDataGrid-row:hover": {
               backgroundColor: "#89AEE0",

@@ -60,7 +60,7 @@ const Navbar = () => {
           </Stack>
         </Link>
 
-        <Stack direction={"row"} spacing={2} alignItems={"center"}>
+        <Stack direction={"row"} spacing={2} alignItems="center">
           <Link to={"/getting-started/introduction"}>
             <Button variant={"text"}>Get Started</Button>
           </Link>

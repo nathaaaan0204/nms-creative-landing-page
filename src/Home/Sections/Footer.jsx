@@ -17,8 +17,6 @@ const Footer = () => {
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-
-        position: "relative",
         padding: {
           mobile: "48px 16px",
           laptop: "98px 16px",
@@ -26,15 +24,10 @@ const Footer = () => {
       }}
     >
       <Stack
-        sx={{
-          isplay: "flex",
-          flexDirection: "column",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100%",
-          gap: "8px",
-        }}
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        spacing={1}
       >
         <img loading="lazy" src="/logo/nmsLogo.svg" alt="NMS LOGO" />
         <Typography variant="h4" color="primary">

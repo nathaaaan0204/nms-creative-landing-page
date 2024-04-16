@@ -4,27 +4,10 @@ export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      100: "#FFE6D9",
-      200: "#FFC7B4",
-      300: "#FFA28F",
-      400: "#FF7F73",
       main: "#FF4545",
-      600: "#DB3241",
-      700: "#B7223C",
-      800: "#931636",
-      900: "#7A0D33",
     },
-
     secondary: {
-      100: "#E2F0FC",
-      200: "#C6E0F9",
-      300: "#A5C7EF",
-      400: "#89AEE0",
       main: "#638BCC",
-      600: "#486BAF",
-      700: "#314F92",
-      800: "#1F3676",
-      900: "#132461",
     },
     tertiary: {
       main: "#FF6969",
@@ -33,48 +16,16 @@ export const lightTheme = createTheme({
       main: "#DFDFDF",
     },
     info: {
-      100: "#CBFEFA",
-      200: "#97FDFD",
-      300: "#63EEF9",
-      400: "#3DD9F4",
       main: "#00B9ED",
-      600: "#0090CB",
-      700: "#006CAA",
-      800: "#004D89",
-      900: "#003771",
     },
     warning: {
-      100: "#FFF6D8",
-      200: "#FFEBB2",
-      300: "#FFDD8B",
-      400: "#FFCF6F",
       main: "#FFB83F",
-      600: "#DB942E",
-      700: "#B7731F",
-      800: "#935614",
-      900: "#7A400C",
     },
     error: {
-      100: "#FEE8E2",
-      200: "#FECCC5",
-      300: "#FDAAA7",
-      400: "#FB9197",
       main: "#F96D82",
-      600: "#D64F70",
-      700: "#B33660",
-      800: "#902251",
-      900: "#771448",
     },
     success: {
-      100: "#EFFDD6",
-      200: "#DAFCAF",
-      300: "#BEF685",
-      400: "#A2ED65",
       main: "#78E236",
-      600: "#59C227",
-      700: "#3EA21B",
-      800: "#288311",
-      900: "#186C0A",
     },
     neutral: {
       main: "#DFE3E8",
@@ -129,13 +80,10 @@ export const lightTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          // fontSize: "14px",
           borderRadius: "10px",
           textTransform: "uppercase",
           boxShadow: "none",
           padding: "8px 12px",
-          // minWidth: "109px",
-
           "&.MuiButton-containedPrimary": {
             color: "#FFFFFF",
             "@media only screen and (max-width: 600px)": {
@@ -187,22 +135,10 @@ export const lightTheme = createTheme({
         },
       },
     },
-
     MuiListSubheader: {
       styleOverrides: {
         root: {
           backgroundColor: "#FFFFF",
-        },
-      },
-    },
-
-    MuiDrawer: {
-      styleOverrides: {
-        root: {
-          "&>.MuiDrawer-paper": {
-            borderRight: "1px dashed rgb(145 158 171 / 23%)",
-            boxShadow: "none",
-          },
         },
       },
     },
@@ -453,7 +389,6 @@ export const lightTheme = createTheme({
         },
       },
     },
-
     MuiFormHelperText: {
       styleOverrides: {
         root: {
@@ -468,7 +403,6 @@ export const lightTheme = createTheme({
         },
       },
     },
-
     MuiDialog: {
       defaultProps: {
         maxWidth: "laptop",

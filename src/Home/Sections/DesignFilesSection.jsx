@@ -1,109 +1,70 @@
-import React from "react";
-import { Box, Button, Card, Grid, Stack, Typography } from "nms-creative-ui";
-import { Divider } from "@mui/material";
+import { Button, Card, Grid, Stack, Typography } from "nms-creative-ui";
 import { Link } from "react-router-dom";
-
-const DESIGNFILES = [
-  {
-    title: "COLOR PALLETTE",
-    subtitle: "Color Palette for a Splash of Inspiration!",
-    description:
-      "From soothing pastels to bold and dynamic hues, our palette is crafted to fuel your creativity and bring your designs to life.",
-    imageSource: "/images/Color Pallete.png",
-    alt: "Color Pallete",
-  },
-  {
-    title: "VARIANTS",
-    subtitle: "Multiple Design Variants",
-    description:
-      "Each component comes with various design options, providing flexibility for cool and unique vibes.",
-    imageSource: "/images/Variants.png",
-    alt: "Variants",
-  },
-  {
-    title: "TYPOGRAPHY",
-    subtitle: "Dynamic Typography ",
-    description:
-      "Whether you're aiming for sophistication or a contemporary edge, our diverse selection ensures your message stands out.",
-    imageSource: "/images/Typography.jpg",
-    alt: "Typography",
-  },
-];
+import CustomDivider from "../../Components/Generic Components/General Components/CustomDivider";
+import DESIGNFILES from "../../DATA/designFiles";
 
 const DesignFilesSection = () => {
   return (
-    <Box
+    <Stack
+      justifyContent="center"
+      alignItems="center"
+      spacing={3}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "48px",
+        textAlign: "center",
         padding: {
           mobile: "50px 16px",
           tablet: "48px 16px",
         },
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
-          gap: "24px",
-        }}
-      >
+      <Stack justifyContent="center" alignItems="center" spacing={1}>
         <Typography variant="h4" color="text.main">
           Easy View Files
         </Typography>
         <Typography variant="h2" color="primary">
           Figma Design Files
         </Typography>
-        <Divider
-          orientation="horizontal"
-          variant="middle"
-          style={{
-            width: "200px",
-            borderWidth: "1.5px",
-            borderColor: "#FF4545",
-            // margin: "12px auto",
-          }}
-        />
-        <Typography variant="body1" color="text.main">
-          Level up your Figma design workflow with NMS Creative UI – a treasure
-          trove of design elements and components that seamlessly integrate to
-          bring your creative vision to life.
-        </Typography>
-        <Button
-          component={Link}
-          sx={{
-            fontWeight: "700",
-            width: { mobile: "100%", tablet: "max-content" },
-          }}
-          startIcon={
-            <img
-              loading="lazy"
-              src="/svg images/figma logo.svg"
-              alt="Figma logo"
-              style={{
-                width: "24px",
-              }}
-            />
-          }
-        >
-          Explore In Figma
-        </Button>
-      </Box>
-      <Grid container spacing={2} sx={{ maxWidth: "1300px" }}>
-        {DESIGNFILES.map((item, key) => (
-          <Grid item tablet={6} laptop={4} mobile={12}>
+        <CustomDivider />
+      </Stack>
+      <Typography variant="body1" color="text.main">
+        Level up your Figma design workflow with NMS Creative UI – a treasure
+        trove of design elements and components that seamlessly integrate to
+        bring your creative vision to life.
+      </Typography>
+      <Button
+        component={Link}
+        sx={{
+          fontWeight: "700",
+          width: { mobile: "100%", tablet: "max-content" },
+        }}
+        startIcon={
+          <img
+            loading="lazy"
+            src="/svg images/figma logo.svg"
+            alt="Figma logo"
+            style={{
+              width: "24px",
+            }}
+          />
+        }
+      >
+        Explore In Figma
+      </Button>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          maxWidth: "1300px",
+          textAlign: { mobile: "center", tablet: "left" },
+        }}
+      >
+        {DESIGNFILES.map((item, index) => (
+          <Grid item tablet={6} laptop={4} mobile={12} key={index}>
             <Card
-              elevation={6}
+              elevation={4}
               sx={{
                 backgroundImage: `url("/images/CardBg.png")`,
-
-                width: "100%",
-                "&.MuiPaper-elevation6": {
+                "&.MuiPaper-elevation4": {
                   padding: { mobile: "24px", desktop: "48px" },
                 },
                 display: "flex",
@@ -136,7 +97,7 @@ const DesignFilesSection = () => {
           </Grid>
         ))}
       </Grid>
-    </Box>
+    </Stack>
   );
 };
 

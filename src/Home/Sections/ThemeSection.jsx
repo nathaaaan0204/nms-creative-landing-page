@@ -1,8 +1,8 @@
-import { Divider } from "@mui/material";
-import { Box, Switch, Typography } from "nms-creative-ui";
+import { Stack, Switch, Typography } from "nms-creative-ui";
 import { useUIStore } from "../../store/store";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { THEME_KEY } from "../../config/enums";
+import CustomDivider from "../../Components/Generic Components/General Components/CustomDivider";
 
 const ThemeSection = () => {
   const [{ theme }, { setTheme }] = useUIStore();
@@ -20,12 +20,11 @@ const ThemeSection = () => {
       : "/images/Theme Dashboard.jpg";
 
   return (
-    <Box
+    <Stack
+      justifyContent="center"
+      alignItems="center"
+      spacing={3}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "48px",
         textAlign: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -40,30 +39,20 @@ const ThemeSection = () => {
         },
       }}
     >
-      <Box>
+      <Stack justifyContent="center" alignItems="center" spacing={1}>
         <Typography variant="h4" color="text.main">
           Theme
         </Typography>
         <Typography variant="h2" color="primary">
           Flexible theme customization
         </Typography>
-        <Divider
-          orientation="horizontal"
-          variant="middle"
-          style={{
-            width: "200px",
-            borderWidth: "1.5px",
-            borderColor: "#FF4545",
-            margin: "12px auto",
-          }}
-        />
-        <Typography variant="body1" color="text.main">
-          Dive into the night with our UI Library's sleek Dark Mode, offering a
-          stylish interface for a visually enhanced experience. Elevate your
-          design aesthetics effortlessly.
-        </Typography>
-      </Box>
-
+        <CustomDivider />
+      </Stack>
+      <Typography variant="body1" color="text.main">
+        Dive into the night with our UI Library's sleek Dark Mode, offering a
+        stylish interface for a visually enhanced experience. Elevate your
+        design aesthetics effortlessly.
+      </Typography>
       <Switch
         color="primary"
         checked={theme === "dark"}
@@ -78,7 +67,7 @@ const ThemeSection = () => {
         alt="theme dashboard"
         style={{ width: "100%", maxWidth: "1100px", borderRadius: "12px" }}
       />
-    </Box>
+    </Stack>
   );
 };
 
