@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import { Icon } from "nms-creative-ui";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
